@@ -1,6 +1,6 @@
 ---
 title: "Web App Forms"
-img: "work_forms.png"
+img: "work_forms.webp"
 slug: 'web-app-forms'
 description: "A collection of web app form designs for my portfolio, personal project"
 ---
