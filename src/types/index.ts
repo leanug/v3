@@ -5,5 +5,7 @@ export type Work = {
     slug: string;
     description: string;
     outbound?: string;
+    featured?: boolean;
+    tags?: string[];
   };
 };
