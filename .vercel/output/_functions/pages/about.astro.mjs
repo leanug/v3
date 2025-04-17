@@ -1,6 +1,6 @@
 import { c as createComponent, a as createAstro, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_CIvxdYyK.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_P8xnDRHY.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_COI78a3S.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro();
@@ -9,7 +9,7 @@ const $$About = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$About;
   const title = "About me";
   const description = "Learn more about the coder behind the keyboard.";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": title, "description": description }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="mb-28 max-w-screen-2xl mx-auto px-5"> <div class="max-w-2xl"> <span class="font-medium uppercase text-sm">A few things about me</span> <h1 class="heading-hero">
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": title, "description": description }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="mb-28 px-5"> <div class="max-w-2xl"> <span class="font-medium uppercase text-sm">A few things about me</span> <h1 class="heading-hero">
 My Path in Web Development
 </h1> <h2 class="font-semibold text-xl md:text-3xl mb-4">
 Years of Pixels & Code

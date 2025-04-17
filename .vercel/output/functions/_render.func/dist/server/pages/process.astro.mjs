@@ -1,12 +1,12 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_CIvxdYyK.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_P8xnDRHY.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_COI78a3S.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Process = createComponent(($$result, $$props, $$slots) => {
   const title = "Process";
   const description = "Building Your Website, Step by Step";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": title, "description": description }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section aria-label="Web development process" class="max-w-screen-2xl mx-auto px-5 mb-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> <div> <span class="text-sm">Step 01.</span> <h2 class="font-semibold text-3xl">
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": title, "description": description }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section aria-label="Web development process" class="px-5 mb-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> <div> <span class="text-sm">Step 01.</span> <h2 class="font-semibold text-3xl">
 Project Request
 </h2> <div class="space-y-3 mt-5"> <p>
 First, you send a quick project request. This helps me understand what 

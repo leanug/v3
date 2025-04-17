@@ -12,22 +12,20 @@ const description = "Thoughtful Web development that helps businesses and creato
 ---
 
 <BaseLayout {title} {description}>
-  <section aria-label="Work Collection" class="mb-32 max-w-screen-2xl mx-auto px-5">
-    <div class="space-y-6">
+  <section aria-label="Work Collection" class="mb-32 px-5">
+    <div class="space-y-8">
       {work.map(({ data }: { data: Work['data'] }) => (
-        <article 
-          class="relative rounded-2xl overflow-hidden" 
-        >
-          <WorkItem
-            transition={data.slug}
-            img={data.img}
-            title={data.title}
-          />
-        </article>
+        <WorkItem
+          transition={data.slug}
+          img={data.img}
+          title={data.title}
+          tags={data?.tags}
+          outbound={data?.outbound}
+        />
       ))}
     </div>
   </section>
-  <section class="mb-28 mt-20 max-w-screen-2xl mx-auto px-5">
+  <section class="mb-28 mt-20 px-5">
     <div class="max-w-3xl">
       <span class="font-medium uppercase text-sm">Hello, my name is Leandro 👋</span>
       <h1 class="heading-hero mt-2"> 
@@ -43,6 +41,26 @@ const description = "Thoughtful Web development that helps businesses and creato
         I'm comfortable with Figma and focus on creating clean, 
         user-focused interfaces that actually work.      
       </p>
+      <div class="flex gap-3 mt-8">
+        <a
+          href="mailto:leandroubilla@protonmail.com"
+          class="px-4 hidden md:block text-sm py-2 text-white hover:cursor-pointer bg-[#1D1D1D] rounded-lg font-semibold"
+        >
+          Work with me
+        </a>
+        <a 
+          href="https://www.fiverr.com/leanug" 
+          class="py-2 hover:bg-gray-200 transition ease-in font-semibold px-3 rounded-lg text-sm md:flex items-center gap-2 hidden border border-gray-300"
+        >
+          <img 
+            aria-hidden="true" 
+            class="w-4 h-4" 
+            src="/fiverr-icon.svg" 
+            alt="Fiverr Logo" 
+          /> 
+          Fiverr Reviews
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
