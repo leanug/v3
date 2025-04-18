@@ -24,7 +24,7 @@ const $$Logo = createComponent(($$result, $$props, $$slots) => {
 const $$Header = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<header class="mt-6 max-w-screen-2xl w-full mx-auto px-5 mb-12"> <nav class="flex items-center justify-between"> <a href="/" class="flex items-center gap-2.5"> ${renderComponent($$result, "Logo", $$Logo, {})} </a> <div class="flex gap-4 items-center"> <a href="https://www.fiverr.com/leanug" class="py-2 hover:bg-gray-200 transition ease-in font-semibold px-3 rounded-lg text-sm md:flex items-center gap-2 hidden border border-gray-300"> <img aria-hidden="true" class="w-4 h-4" src="/fiverr-icon.svg" alt="Fiverr Logo">
 Fiverr Reviews
-</a> <a href="mailto:leandroubilla@protonmail.com" class="px-4 hidden md:block text-sm py-2 text-white hover:cursor-pointer bg-[#1D1D1D] rounded-lg font-semibold">
+</a> <a href="mailto:leandroubilla@protonmail.com" class="all-btn">
 Work with me
 </a> <button class="hover:cursor-pointer hamburger -mx-[3px]" aria-label="Open menu"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7"> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"></path> </svg> </button> </div> </nav> </header>`;
 }, "/media/leanug/Kingston 120/Astro/v3/src/components/Header.astro", void 0);

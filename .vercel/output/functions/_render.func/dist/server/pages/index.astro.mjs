@@ -1,7 +1,7 @@
 import { c as createComponent, a as createAstro, m as maybeRenderHead, r as renderComponent, d as addAttribute, b as renderTemplate, e as renderTransition } from '../chunks/astro/server_CIvxdYyK.mjs';
 import 'kleur/colors';
 import { g as getCollection } from '../chunks/_astro_content_BWhUmCwp.mjs';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_COI78a3S.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_jqY5BC-u.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_B9BCNabl.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
@@ -37,7 +37,7 @@ I help businesses and creators craft meaningful user journeys,
 I build sites using both code and no-code tools, depending on what fits best. 
         I'm comfortable with Figma and focus on creating clean, 
         user-focused interfaces that actually work.
-</p> <div class="flex gap-3 mt-8"> <a href="mailto:leandroubilla@protonmail.com" class="px-4 hidden md:block text-sm py-2 text-white hover:cursor-pointer bg-[#1D1D1D] rounded-lg font-semibold">
+</p> <div class="flex gap-3 mt-8"> <a href="mailto:leandroubilla@protonmail.com" class="all-btn">
 Work with me
 </a> <a href="https://www.fiverr.com/leanug" class="py-2 hover:bg-gray-200 transition ease-in font-semibold px-3 rounded-lg text-sm md:flex items-center gap-2 hidden border border-gray-300"> <img aria-hidden="true" class="w-4 h-4" src="/fiverr-icon.svg" alt="Fiverr Logo">
 Fiverr Reviews
