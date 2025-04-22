@@ -11,10 +11,10 @@ const $$file = "/media/leanug/Kingston 120/Astro/v3/src/pages/faq.astro";
 const $$url = "/faq";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	default: $$Faq,
-	file: $$file,
-	url: $$url
+  __proto__: null,
+  default: $$Faq,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;
