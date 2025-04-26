@@ -3,6 +3,7 @@
 import '@fontsource-variable/geist';
 import { ClientRouter } from 'astro:transitions'
 import '../styles/global.css'
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 
 import Overlay from '../components/Overlay.astro'
 import Header from '../components/Header.astro'
@@ -27,6 +28,7 @@ import Footer from '../components/Footer.astro'
     <meta property="og:url" content="https://www.leandroubilla.com" />
 
     <ClientRouter />
+    <SpeedInsights/> 
 	</head>
 	<body>
     <div class="relative leading-tightest">

@@ -1,7 +1,7 @@
 import { c as createComponent, a as createAstro, m as maybeRenderHead, r as renderComponent, d as addAttribute, b as renderTemplate, e as renderTransition } from '../chunks/astro/server_CIvxdYyK.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../chunks/_astro_content_W1E1N_iT.mjs';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_jqY5BC-u.mjs';
+import { g as getCollection } from '../chunks/_astro_content_C-xt0hSZ.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_BxSGDylI.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_B9BCNabl.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
@@ -30,13 +30,16 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": title, "description": description }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<section aria-label="Work Collection" class="mb-32 px-5"> <div class="space-y-8"> ${work.map(({ data }) => renderTemplate`${renderComponent($$result2, "WorkItem", $$WorkItem, { "transition": data.slug, "img": data.img, "title": data.title, "tags": data?.tags, "outbound": data?.outbound })}`)} </div> </section> <section class="mb-28 mt-20 px-5"> <div class="max-w-3xl"> <span class="font-medium uppercase text-sm">Hello, my name is Leandro 👋</span> <h1 class="heading-hero mt-2">
 Webflow and React.js Developer
 </h1> <p class="text-balance mb-2">
-I help businesses and creators craft meaningful user journeys, 
-        with thoughtful web development focused on design, functionality, 
-        and performance.
+I'm a developer and designer focused on building clean, 
+        high-performing websites with a strong emphasis on usability and design precision. 
+        I care about crafting interfaces that are both functional and beautiful, 
+        the kind users don't have to think twice about.
 </p> <p>
-I build sites using both code and no-code tools, depending on what fits best. 
-        I'm comfortable with Figma and focus on creating clean, 
-        user-focused interfaces that actually work.
+I work with both code and no-code tools, depending on the 
+        project's needs. I'm comfortable in Figma and at home in the 
+        frontend, where I pay attention to the details that shape the
+        user experience. Whether it's a marketing site, product UI, or 
+        landing page, I aim for a balance of speed, clarity, and aesthetics.
 </p> <div class="flex gap-3 mt-8"> <a href="mailto:leandroubilla@protonmail.com" class="all-btn">
 Work with me
 </a> <a href="https://www.fiverr.com/leanug" class="py-2 hover:bg-gray-200 transition ease-in font-semibold px-3 rounded-lg text-sm md:flex items-center gap-2 hidden border border-gray-300"> <img aria-hidden="true" class="w-4 h-4" src="/fiverr-icon.svg" alt="Fiverr Logo">
