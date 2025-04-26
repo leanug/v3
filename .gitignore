@@ -1,0 +1,32 @@
+# Node
+node_modules/
+dist/
+.build/
+.cache/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Astro
+.astro/
+
+# Vercel
+.vercel/
+
+# Environment files
+.env
+.env.*.local
+
+# Mac
+.DS_Store
+
+# System
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Local dev stuff
+*.local
