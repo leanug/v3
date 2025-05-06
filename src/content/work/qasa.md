@@ -1,7 +1,7 @@
 ---
-title: "Altura Framer Template"
-img: "work_altura.webp"
-slug: 'altura'
+title: "Qasa Framer Template"
+img: "work_qasa.webp"
+slug: 'qasa'
 description: "Real Estate Framer Template"
 tags: ["UI Design", "Figma", "Portfolio", "Framer"]
 ---
