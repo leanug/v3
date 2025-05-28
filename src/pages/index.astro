@@ -16,11 +16,11 @@ const description = "Thoughtful Web development that helps businesses and creato
     <div class="space-y-8">
       {work.map(({ data }: { data: Work['data'] }) => (
         <WorkItem
-          transition={data.slug}
           img={data.img}
           title={data.title}
           tags={data?.tags}
           outbound={data?.outbound}
+          slug={data.slug}
         />
       ))}
     </div>
