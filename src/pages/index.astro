@@ -1,6 +1,8 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 
+import { Image } from 'astro:assets';
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 import WorkItem from '../components/WorkItem.astro';
 import type { Work } from '../types/index';
@@ -55,12 +57,15 @@ const description = "Thoughtful Web development that helps businesses and creato
           href="https://www.fiverr.com/leanug" 
           class="py-2 hover:bg-gray-200 transition ease-in font-semibold px-3 rounded-lg text-sm md:flex items-center gap-2 hidden border border-gray-300"
         >
-          <img 
-            aria-hidden="true" 
-            class="w-4 h-4" 
-            src="/fiverr-icon.svg" 
-            alt="Fiverr Logo" 
-          /> 
+          <Image
+            src="/fiverr-icon.svg"
+            alt={`Fiverr Logo`} 
+            class="w-4 h-4"
+            width="32" 
+            height="32"
+            decoding="async"
+            loading="lazy"
+          />
           Fiverr Reviews
         </a>
       </div>

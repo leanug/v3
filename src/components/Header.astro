@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro"
+import { Image } from 'astro:assets';
 ---
 
 <header class="mt-6 max-w-screen-2xl w-full mx-auto px-5 mb-12">
@@ -12,12 +13,15 @@ import Logo from "./Logo.astro"
         href="https://www.fiverr.com/leanug" 
         class="py-2 hover:bg-gray-200 transition ease-in font-semibold px-3 rounded-lg text-sm md:flex items-center gap-2 hidden border border-gray-300"
       >
-        <img 
-          aria-hidden="true" 
-          class="w-4 h-4" 
-          src="/fiverr-icon.svg" 
-          alt="Fiverr Logo" 
-        /> 
+      <Image
+        src="/fiverr-icon.svg"
+        alt={`Fiverr Logo`} 
+        class="w-4 h-4"
+        width="32" 
+        height="32"
+        decoding="async"
+        loading="lazy"
+      />
         Fiverr Reviews
       </a>
       <a
