@@ -1,5 +1,6 @@
 ---
 title: "SaaS Hero Concept"
+date: 2025-04-02
 img: "work_saas_hero.webp"
 slug: "saas-hero-concept"
 description: "A SaaS landing page hero section focused on lead qualification — part of a personal portfolio project."

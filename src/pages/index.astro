@@ -14,19 +14,6 @@ const description = "Thoughtful Web development that helps businesses and creato
 ---
 
 <BaseLayout {title} {description}>
-  <section aria-label="Work Collection" class="mb-32 px-5">
-    <div class="space-y-8">
-      {work.map(({ data }: { data: Work['data'] }) => (
-        <WorkItem
-          img={data.img}
-          title={data.title}
-          tags={data?.tags}
-          outbound={data?.outbound}
-          slug={data.slug}
-        />
-      ))}
-    </div>
-  </section>
   <section class="mb-28 mt-20 px-5">
     <div class="max-w-3xl">
       <span class="font-medium uppercase text-sm">Hello, my name is Leandro 👋</span>
@@ -69,6 +56,19 @@ const description = "Thoughtful Web development that helps businesses and creato
           Fiverr Reviews
         </a>
       </div>
+    </div>
+  </section>
+  <section aria-label="Work Collection" class="mb-32 px-5">
+    <div class="space-y-8">
+      {work.map(({ data }: { data: Work['data'] }) => (
+        <WorkItem
+          img={data.img}
+          title={data.title}
+          tags={data?.tags}
+          outbound={data?.outbound}
+          slug={data.slug}
+        />
+      ))}
     </div>
   </section>
 </BaseLayout>
