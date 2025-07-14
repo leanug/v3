@@ -1,15 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
-const { slug, img, title, outbound, tags } = Astro.props;
-
-const colors = [
-  'bg-blue-100 text-blue-700',
-  'bg-purple-100 text-purple-700',
-  'bg-red-100 text-red-700',
-  'bg-green-100 text-green-700',
-  'bg-orange-100 text-orange-700',
-];
+const { slug, img, title, outbound, tags, more } = Astro.props;
 ---
 
 <article class="relative">
@@ -21,7 +13,7 @@ const colors = [
           href={outbound} 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="flex gap-2 items-center bg-gray-200 hover:bg-gray-300 transition px-3 h-8 rounded-lg"
+          class="flex gap-2 text-sm items-center bg-gray-200 hover:bg-gray-300 transition px-3 h-8 rounded-lg"
         >
           Open
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
@@ -29,29 +21,59 @@ const colors = [
           </svg>
         </a>
       )}
+
+      {more && (
+        <a 
+          href={`/work/${slug}`} 
+          class="flex gap-2 text-sm items-center bg-gray-200 hover:bg-gray-300 transition px-3 h-8 rounded-lg"
+        >
+          See more
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      )}
     </div>
     
     {tags && (
       <ul class="flex flex-wrap gap-3 text-sm">
-        {tags.map((tag: string, index: number) => (
-                <li class={`px-3 h-8 rounded-lg flex items-center ${colors[index % colors.length]}`}>
+        {tags.map((tag: string) => (
+          <li class="px-3 h-8 rounded-lg flex items-center bg-[#f6f6f6] text-gray-700">
             {tag}
           </li>
         ))}
       </ul>
     )}
   </div>
-  <div class="overflow-hidden rounded-2xl group cursor-all-scroll">
 
-  <Image
-    transition:name={`img-${slug}`}
-    src={`/${img}`}
-    alt={`Cover of ${title}`} 
-    class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
-    width="1280" 
-    height="960"
-    decoding="async"
-    loading="lazy"
-  />
-  </div>
+  {more ? (
+    <a 
+      href={`/work/${slug}`} 
+      class="block overflow-hidden rounded-2xl group cursor-pointer"
+    >
+      <Image
+        transition:name={`img-${slug}`}
+        src={`/${img}`}
+        alt={`Cover of ${title}`} 
+        class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+        width="1280" 
+        height="960"
+        decoding="async"
+        loading="lazy"
+      />
+    </a>
+  ) : (
+    <div class="overflow-hidden rounded-2xl group cursor-all-scroll">
+      <Image
+        transition:name={`img-${slug}`}
+        src={`/${img}`}
+        alt={`Cover of ${title}`} 
+        class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+        width="1280" 
+        height="960"
+        decoding="async"
+        loading="lazy"
+      />
+    </div>
+  )}
 </article>

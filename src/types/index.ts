@@ -7,5 +7,7 @@ export type Work = {
     outbound?: string;
     featured?: boolean;
     tags?: string[];
+    published?: boolean;
+    more?: boolean;
   };
 };
