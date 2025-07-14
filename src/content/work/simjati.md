@@ -2,6 +2,10 @@
 title: "Simjati Club"
 date: 2025-01-02
 img: "work_simjati_cover.webp"
+galleryImg1: "work-simjati-gallery-img-1.webp"
+galleryImg2: "work-simjati-gallery-img-2.webp"
+gallerySideImg1: "work-simjati-gallery-side-img-1.webp"
+gallerySideImg2: "work-simjati-gallery-side-img-2.webp"
 slug: "simjati"
 description: "Share document"
 tags: ["Webflow", "Client Work"]
@@ -23,13 +27,12 @@ more: true
 
 <ul class="divide-y divide-gray-200 border-y border-gray-200">
   <li class="py-2"><span class="text-gray-500">CLIENT:</span> <a href="https://mutaxmk.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">mutaxmk.com</a></li>
-  <li class="py-2"><span class="text-gray-500">COUNTRY:</span> 🇵🇦 Panama</li>
-  <li class="py-2"><span class="text-gray-500">WEB BUILDER:</span> Webflow</li>
-  <li class="py-2"><span class="text-gray-500">PAGES:</span> 10</li>
-  <li class="py-2"><span class="text-gray-500">SWIPER.JS:</span> Integrated</li>
-  <li class="py-2"><span class="text-gray-500">DESIGN:</span> Provided by client</li>
-  <li class="py-2"><span class="text-gray-500">ROLE:</span> Webflow Developer</li>
-  <li class="py-2"><span class="text-gray-500">FOCUS:</span> Clean layout, ease of use, mobile responsiveness</li>
+  <li class="py-3"><span class="text-gray-500">COUNTRY:</span> 🇵🇦 Panama</li>
+  <li class="py-3"><span class="text-gray-500">WEB BUILDER:</span> Webflow</li>
+  <li class="py-3"><span class="text-gray-500">PAGES:</span> 10</li>
+  <li class="py-3"><span class="text-gray-500">DESIGN:</span> Provided by client</li>
+  <li class="py-3"><span class="text-gray-500">ROLE:</span> Webflow Developer</li>
+  <li class="py-3"><span class="text-gray-500">FOCUS:</span> Clean layout, ease of use, mobile responsiveness</li>
 </ul>
 
 

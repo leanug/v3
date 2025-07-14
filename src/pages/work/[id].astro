@@ -15,7 +15,15 @@ export async function getStaticPaths() {
 }
 
 const { data } = Astro.props;
-const { title, img, slug } = data;
+const { 
+  title, 
+  img, 
+  slug, 
+  galleryImg1,
+  galleryImg2,
+  gallerySideImg1,
+  gallerySideImg2,
+} = data;
 
 const { Content } = await render(Astro.props)
 
@@ -23,21 +31,18 @@ export const prerender = true;
 ---
 
 <BaseLayout title={`${title} - Portfolio`}>
-  <div class="flex flex-col gap-12 px-2.5 lg:px-5 pb-20">
-    <a href="/">Go back</a>
-    <section class="flex flex-col gap-8">
-      <div class="overflow-hidden rounded-2xl">
-        <Image
-          transition:name={`img-${slug}`}
-          src={`/${img}`}
-          alt={`Cover of ${title}`} 
-          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
-          width="1280" 
-          height="960"
-          decoding="async"
-          loading="lazy"
-        />
-      </div>
+  <div class="flex flex-col gap-10 px-2.5 lg:px-5 pb-16">
+    <section class="flex flex-col gap-10">
+      <Image
+        transition:name={`img-${slug}`}
+        src={`/${img}`}
+        alt={`Cover of ${title}`} 
+        class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+        width="1280" 
+        height="960"
+        decoding="async"
+        loading="lazy"
+      />
       <div class="flex">
         <h1 class="text-3xl w-1/5 font-semibold">{title}</h1>
         <div class="w-3/5 md:text-xl">
@@ -45,8 +50,41 @@ export const prerender = true;
         </div>
       </div>
       <Image
-        src={`/${img}`}
-        alt={`Cover of ${title}`} 
+        src={`/${galleryImg1}`}
+        alt={`${title} First gallery image`} 
+        class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+        width="1280" 
+        height="960"
+        decoding="async"
+        loading="lazy"
+      />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div>
+          <Image
+          src={`/${gallerySideImg1}`}
+          alt={`${title} Side image 1`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+        </div>
+         <div>
+          <Image
+          src={`/${gallerySideImg2}`}
+          alt={`${title} Side image 2`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+        </div>        
+      </div>
+      <Image
+        src={`/${galleryImg2}`}
+        alt={`${title} Second gallery image`} 
         class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
         width="1280" 
         height="960"
