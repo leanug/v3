@@ -5,7 +5,7 @@ img: "work-bento-cards-cover.webp"
 slug: 'bento-cards'
 description: "A collection of bento cards designs for my portfolio, personal project"
 tags: ["Figma", "Portfolio"]
-published: true
+published: false
 featured: true
 ---
 
