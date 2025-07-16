@@ -7,7 +7,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import WorkItem from '../components/WorkItem.astro';
 import type { Work } from '../types/index';
 
-const work: CollectionEntry<'work'>[] = await getCollection('work');
+const work: CollectionEntry<'work'>[] = (await getCollection('work')).sort(
+  (a: CollectionEntry<'work'>, b: CollectionEntry<'work'>) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 
 const title = "Leandro Ubilla - Web developer";
 const description = "Thoughtful Web development that helps businesses and creators craft meaningful user journeys with a focus on design, functionality, and performance.";
