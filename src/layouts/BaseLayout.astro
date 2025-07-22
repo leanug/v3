@@ -18,14 +18,26 @@ import Footer from '../components/Footer.astro'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		
-    <!-- SEO Tags -->
-    <title>{Astro.props.title ?? 'Astro Basics'}</title>
-    <meta name="description" content={Astro.props.description ?? 'Modern UI and web development'} />
-    <meta property="og:title" content={Astro.props.title ?? 'Astro Basics'} />
-    <meta property="og:description" content={Astro.props.description ?? 'Modern UI and web development'} />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.leandroubilla.com" />
+    <!-- SEO Meta Tags -->
+    <title>{Astro.props.title ?? 'Leandro Ubilla - Web developer'}</title>
+    <meta name="description" content={Astro.props.description ?? 'Thoughtful Web development that helps businesses and creators craft meaningful user journeys with a focus on design, functionality, and performance.'}>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.leandroubilla.com">
+    <meta property="og:title" content={Astro.props.title ?? 'Leandro Ubilla - Web developer'}>
+    <meta property="og:description" content={Astro.props.description ?? 'Thoughtful Web development that helps businesses and creators craft meaningful user journeys with a focus on design, functionality, and performance.'}>
+    <meta property="og:image" content="https://leandroubilla.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="leandroubilla.com">
+    <meta name="twitter:url" content="https://www.leandroubilla.com">
+    <meta name="twitter:title" content={Astro.props.title ?? 'Leandro Ubilla - Web developer'}>
+    <meta name="twitter:description" content={Astro.props.description ?? 'Thoughtful Web development that helps businesses and creators craft meaningful user journeys with a focus on design, functionality, and performance.'}>
+    <meta name="twitter:image" content="https://leandroubilla.com/og-image.jpg">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
     <ClientRouter />
     <SpeedInsights/> 
