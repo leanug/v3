@@ -1,7 +1,7 @@
 ---
 title: "Simjati Club"
 date: 2025-01-02
-img: "work_simjati_cover.webp"
+img: "work-simjati-cover.webp"
 galleryImg1: "work-simjati-gallery-img-1.webp"
 galleryImg2: "work-simjati-gallery-img-2.webp"
 gallerySideImg1: "work-simjati-gallery-side-img-1.webp"
