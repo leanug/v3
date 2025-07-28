@@ -8,6 +8,31 @@ import Logo from "./Logo.astro"
       <Logo />
     </a>
     <div class="flex gap-4 items-center">
+      <div class="hidden md:flex gap-y-4 text-sm font-semibold gap-8 mr-4">
+        <a href="/" class="relative inline-block group">
+          <span class="block transition-transform duration-300 group-hover:-translate-y-1">
+            Home
+          </span>
+        </a>
+
+        <a href="/about" class="relative inline-block group">
+          <span class="block transition-transform duration-300 group-hover:-translate-y-1">
+            About me
+          </span>
+        </a>
+
+        <a href="/process" class="relative inline-block group">
+          <span class="block transition-transform duration-300 group-hover:-translate-y-1">
+            Process
+          </span>
+        </a>
+
+        <a href="/services" class="relative inline-block group">
+          <span class="block transition-transform duration-300 group-hover:-translate-y-1">
+            Services
+          </span>
+        </a>
+      </div>
       <a
         href="mailto:leandroubilla@protonmail.com"
         class="all-btn hidden md:inline-block text-sm"
