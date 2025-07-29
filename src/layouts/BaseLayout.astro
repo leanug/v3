@@ -39,6 +39,25 @@ import Footer from '../components/Footer.astro'
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
+    <!-- Prevent flash of unstyled content (FOUC) on first paint.
+     Hide body until styles are applied, then fade it in.
+     Note: This is a workaround, not a perfect fix. -->
+
+    <style is:inline>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+
+    <style is:global>
+      body {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+      }
+    </style>
+
     <ClientRouter />
     <SpeedInsights/> 
 	</head>
