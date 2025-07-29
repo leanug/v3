@@ -43,9 +43,9 @@ export const prerender = true;
         decoding="async"
         loading="lazy"
       />
-      <div class="flex">
-        <h1 class="text-3xl w-1/5 font-semibold">{title}</h1>
-        <div class="w-3/5 md:text-xl">
+      <div class="flex md:flex-row flex-col gap-5 md:gap-10">
+        <h1 class="text-xl sm:text-2xl md:text-3xl md:w-1/5 font-semibold">{title}</h1>
+        <div class="md:w-3/5 md:text-xl">
           <Content />
         </div>
       </div>
