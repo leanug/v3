@@ -10,7 +10,7 @@ slug: "strata"
 description: "Log in page"
 tags: ["Design", "Figma", "Portfolio"]
 outbound: 
-published: true
-featured: true
+published: false
+featured: false
 more: false
 ---
