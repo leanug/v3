@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
-const { slug, img, title, outbound, tags, more } = Astro.props;
+const { slug, img, title, outbound, tags, more, video } = Astro.props;
 ---
 
 <article class="relative">
@@ -10,29 +10,59 @@ const { slug, img, title, outbound, tags, more } = Astro.props;
       href={`/work/${slug}`} 
       class="block overflow-hidden rounded-2xl group cursor-pointer"
     >
-      <Image
-        transition:name={`img-${slug}`}
-        src={`/${img}`}
-        alt={`Cover of ${title}`} 
-        class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
-        width="1280" 
-        height="960"
-        decoding="async"
-        loading="lazy"
-      />
+      {video ? (
+        <video
+          class="w-full h-full aspect-[4/3] object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          width="1280"
+          height="960"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source src={`/media/work/${slug}/${video}`} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <Image
+          transition:name={`img-${slug}`}
+          src={`/media/work/${slug}/${img}`}
+          alt={`Cover of ${title}`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+      )}
     </a>
   ) : (
     <div class="overflow-hidden rounded-2xl group cursor-all-scroll">
-      <Image
-        transition:name={`img-${slug}`}
-        src={`/${img}`}
-        alt={`Cover of ${title}`} 
-        class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
-        width="1280" 
-        height="960"
-        decoding="async"
-        loading="lazy"
-      />
+      {video ? (
+        <video
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          width="1280"
+          height="960"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source src={video} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <Image
+          transition:name={`img-${slug}`}
+          src={`/media/work/${slug}/${img}`}
+          alt={`Cover of ${title}`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+      )}
     </div>
   )}
 

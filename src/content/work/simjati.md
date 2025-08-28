@@ -1,11 +1,11 @@
 ---
 title: "Simjati Club"
 date: 2025-01-02
-img: "work-simjati-cover.webp"
-galleryImg1: "work-simjati-gallery-img-1.webp"
-galleryImg2: "work-simjati-gallery-img-2.webp"
-gallerySideImg1: "work-simjati-gallery-side-img-1.webp"
-gallerySideImg2: "work-simjati-gallery-side-img-2.webp"
+img: "cover.webp"
+galleryImg1: "gallery-img-1.webp"
+galleryImg2: "gallery-img-2.webp"
+gallerySideImg1: "gallery-side-img-1.webp"
+gallerySideImg2: "gallery-side-img-2.webp"
 slug: "simjati"
 description: "Share document"
 tags: ["Webflow", "Client Work"]

@@ -14,5 +14,6 @@ export type Work = {
     tags?: string[];
     published?: boolean;
     more?: boolean;
+    video?: string;
   };
 };

@@ -1,12 +1,12 @@
 ---
 title: "Empower"
 date: 2025-01-18
-video: "media/work/empower/intro.webm"
-img: "work-empower-cover.webp"
-galleryImg1: "work-empower-gallery-img-1.webp"
-galleryImg2: "work-empower-gallery-img-2.webp"
-gallerySideImg1: "work-empower-gallery-side-img-1.webp"
-gallerySideImg2: "work-empower-gallery-side-img-2.webp"
+video: "intro.webm"
+img: "cover.webp"
+galleryImg1: "work-gallery-img-1.webp"
+galleryImg2: "work-gallery-img-2.webp"
+gallerySideImg1: "work-gallery-side-img-1.webp"
+gallerySideImg2: "work-gallery-side-img-2.webp"
 slug: "empower"
 description: "Empower is a landing page built in Webflow for a platform dedicated to professional growth"
 tags: ["Webflow", "Client Work"]
