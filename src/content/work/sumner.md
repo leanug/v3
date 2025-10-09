@@ -10,8 +10,8 @@ slug: "sumner"
 description: "Premium Framer template for modern real estate"
 tags: ["Framer", "Template"]
 outbound: "https://sumner.framer.website/"
-published: true
-featured: true
+published: false
+featured: false
 more: false
 ---
 
