@@ -5,8 +5,8 @@ img: "cover.webp"
 slug: 'create-projects-forms'
 description: "Web App Create Projects Forms"
 tags: ["UI Design", "Figma", "Portfolio"]
-published: true
-featured: fasle
+published: false
+featured: false
 ---
 
 Web App Create Projects Forms
