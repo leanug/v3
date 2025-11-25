@@ -1,13 +1,13 @@
 ---
 title: "Workflow"
-date: 2025-10-12
+date: 2025-11-25
 img: "cover.webp"
-slug: 'workflow'
-description: "Workflow I did for my portfolio, personal project"
+slug: "workflow"
+description: "Workflow I designed for my portfolio. Personal project."
 tags: ["UI Design", "Figma", "Portfolio"]
-published: false
-featured: false
+published: true
+featured: true
 more: false
 ---
 
-Workflow I did for my portfolio, personal project
+Workflow I designed for my portfolio. Personal project.
