@@ -8,11 +8,11 @@ const { slug, img, title, outbound, tags, more, video } = Astro.props;
   {more ? (
     <a 
       href={`/work/${slug}`} 
-      class="block overflow-hidden rounded-2xl group cursor-pointer"
+      class="block overflow-hidden rounded-xl group"
     >
       {video ? (
         <video
-          class="w-full h-full aspect-[4/3] object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          class="w-full h-full aspect-[4/3] object-cover rounded-xl bg-[#f2f2f2]"
           width="1280"
           height="960"
           autoplay
@@ -28,7 +28,7 @@ const { slug, img, title, outbound, tags, more, video } = Astro.props;
           transition:name={`img-${slug}`}
           src={`/media/work/${slug}/${img}`}
           alt={`Cover of ${title}`} 
-          class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          class="w-full object-cover rounded-xl bg-[#f2f2f2]"
           width="1280" 
           height="960"
           decoding="async"
@@ -37,10 +37,10 @@ const { slug, img, title, outbound, tags, more, video } = Astro.props;
       )}
     </a>
   ) : (
-    <div class="overflow-hidden rounded-2xl group cursor-all-scroll">
+    <div class="overflow-hidden rounded-xl group">
       {video ? (
         <video
-          class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          class="w-full object-cover rounded-xl bg-[#f2f2f2]"
           width="1280"
           height="960"
           autoplay
@@ -56,7 +56,7 @@ const { slug, img, title, outbound, tags, more, video } = Astro.props;
           transition:name={`img-${slug}`}
           src={`/media/work/${slug}/${img}`}
           alt={`Cover of ${title}`} 
-          class="w-full object-cover rounded-2xl bg-[#f2f2f2] transition-transform duration-300 ease-in-out hover:scale-105"
+          class="w-full object-cover rounded-xl bg-[#f2f2f2]"
           width="1280" 
           height="960"
           decoding="async"
@@ -99,7 +99,7 @@ const { slug, img, title, outbound, tags, more, video } = Astro.props;
     {tags && (
       <ul class="flex flex-wrap gap-3 text-sm">
         {tags.map((tag: string) => (
-          <li class="px-3 h-8 rounded-lg flex items-center bg-[#f2f2f2] text-gray-700">
+          <li class="px-3 h-8 rounded-lg flex items-center bg-gray-200 text-gray-700">
             {tag}
           </li>
         ))}
