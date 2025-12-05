@@ -4,7 +4,7 @@ date: 2025-11-15
 img: "cover.webp"
 slug: 'dark-mode-pricing-tables'
 description: "Pricing Tables"
-tags: ["UI Design", "Figma", "Portfolio"]
+tags: ["Figma"]
 published: true
 featured: true
 ---

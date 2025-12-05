@@ -9,7 +9,7 @@ gallerySideImg1: "work-gallery-side-img-1.webp"
 gallerySideImg2: "work-gallery-side-img-2.webp"
 slug: "empower"
 description: "Empower is a landing page built in Webflow for a platform dedicated to professional growth"
-tags: ["Webflow", "Client Work"]
+tags: ["Webflow"]
 outbound: "https://www.empowerpty.com/"
 published: true
 featured: true

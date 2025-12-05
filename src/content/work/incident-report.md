@@ -4,7 +4,7 @@ date: 2025-07-16
 img: "cover.webp"
 slug: "incident-report-card"
 description: "Incident report UI card showing user info, server errors with timestamps, and an investigation note. Designed for clarity and fast triage."
-tags: ["Figma", "Portfolio"]
+tags: ["Figma"]
 published: false
 featured: false
 more: false

@@ -8,7 +8,7 @@ gallerySideImg1: "gallery-side-img-1.webp"
 gallerySideImg2: "gallery-side-img-2.webp"
 slug: "simjati"
 description: "Share document"
-tags: ["Webflow", "Client Work"]
+tags: ["Webflow"]
 outbound: "https://www.simjaticlub.com/"
 published: true
 featured: true

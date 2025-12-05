@@ -4,7 +4,7 @@ date: 2025-07-09
 img: "cover.webp"
 slug: "bot-dashboard"
 description: "Dashboard UI concept focused on bot detection workflows. Personal project."
-tags: ["UI Design", "Dashboard", "Portfolio"]
+tags: ["Figma"]
 published: true
 featured: true
 ---

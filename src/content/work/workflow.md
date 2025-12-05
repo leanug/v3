@@ -5,8 +5,8 @@ img: "cover.webp"
 slug: "workflow"
 description: "Workflow I designed for my portfolio. Personal project."
 tags: ["UI Design", "Figma", "Portfolio"]
-published: true
-featured: true
+published: false
+featured: false
 more: false
 ---
 

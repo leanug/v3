@@ -8,7 +8,7 @@ gallerySideImg1: "work-ocalta-gallery-side-img-1.webp"
 gallerySideImg2: "work-ocalta-gallery-side-img-2.webp"
 slug: "ocalta"
 description: "Construction company website design"
-tags: ["Figma", "Client Work"]
+tags: ["Figma"]
 outbound: "https://www.ocalta.com"
 published: true
 featured: true

@@ -4,7 +4,7 @@ date: 2025-03-10
 img: "cover.webp"
 slug: "forms"
 description: "Forms"
-tags: ["Figma", "Portfolio"]
+tags: ["Figma"]
 published: true
 featured: true
 more: false

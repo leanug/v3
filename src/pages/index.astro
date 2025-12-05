@@ -20,70 +20,43 @@ const description = "Thoughtful Web development that helps businesses and creato
 
 <BaseLayout {title} {description}>
   <section class="my-8 md:mb-12 lg:mb-20 md:mt-16">
-    <div>
-      <span class="font-medium text-sm uppercase">Hello, I'm Leandro 👋🏻</span>
-      <h1 class="heading-hero mt-2.5"> 
-        I design and develop websites that help businesses stand out, communicate clearly, and turn visitors into clients.
-      </h1>
-    </div>
-    <div class="flex flex-col md:flex-row gap-4 mt-10">
-      <a
-        href="mailto:leandroubilla@protonmail.com"
-        class="bg-gray-900 text-white px-4 h-11 shadow-lg hover:shadow-xs flex items-center rounded-lg hover:opacity-80 font-semibold justify-center"        
-      >
-        Work With Me
-      </a>
-      <a 
-        href="https://www.fiverr.com/leanug" 
-        class=" hover:bg-gray-200 transition ease-in h-11 px-4 justify-center rounded-lg flex items-center gap-2.5 border border-gray-300"
-      >
-        <Image
-          src="/fiverr-icon.svg"
-          alt={`Fiverr Logo`} 
-          class="w-6 h-6"
-          width="36" 
-          height="36"
-          decoding="async"
-          loading="lazy"
-        />
-        Fiverr Reviews
-      </a>
-    </div>
-    <div class="flex gap-3 flex-wrap mt-10 lg:mt-20">
-      <span 
-        class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-      >
-        Figma
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-      >
-        Web Design
-      </span>
-       <span 
-        class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-      >
-        Web Development
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-      >
-        Astro.js
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-      >
-        Webflow
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-      >
-        Framer
-      </span>
+     <div class="grid gap-4 xl:gap-8 sm:grid-cols-1 xl:grid-cols-2 items-start">
+      <div>
+        <h1 class="heading-hero mt-2.5"> 
+          Web Developer & Designer from Uruguay
+        </h1>
+      </div>
+      <div class="xl:pl-20">
+        <p class="text-balance mb-2 text-gray-500 lg:text-lg leading-relaxed">
+          Hello, I'm Leandro 👋🏻 and I design and develop websites that help businesses stand out, communicate clearly, and turn visitors into clients.
+        </p>
+        <div class="flex gap-3 flex-wrap mt-10 md:mt-8">
+          <span 
+            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
+          >
+            Figma
+          </span>
+          <span 
+            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
+          >
+            Astro.js
+          </span>
+          <span 
+            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
+          >
+            Webflow
+          </span>
+          <span 
+            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
+          >
+            Framer
+          </span>
+        </div>
+      </div>
     </div>
   </section>
   <section aria-label="Work Collection">
-    <div class="grid gap-6 sm:grid-cols-1 xl:grid-cols-2">
+    <div class="grid gap-8 sm:grid-cols-1 xl:grid-cols-2">
       {work.map(({ data }: { data: Work['data'] }) => (
         <WorkItem
           img={data.img}
