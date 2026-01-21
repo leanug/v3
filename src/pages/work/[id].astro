@@ -23,6 +23,8 @@ const {
   galleryImg2,
   gallerySideImg1,
   gallerySideImg2,
+  galleryImg3,
+  galleryImg4,
 } = data;
 
 const { Content } = await render(Astro.props)
@@ -63,7 +65,7 @@ export const prerender = true;
           <Image
           src={`/media/work/${slug}/${gallerySideImg1}`}
           alt={`${title} Side image 1`} 
-          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          class="w-full h-full object-cover rounded-2xl bg-[#f2f2f2]"
           width="1280" 
           height="960"
           decoding="async"
@@ -74,7 +76,7 @@ export const prerender = true;
           <Image
           src={`/media/work/${slug}/${gallerySideImg2}`}
           alt={`${title} Side image 2`} 
-          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          class="w-full h-full object-cover rounded-2xl bg-[#f2f2f2]"
           width="1280" 
           height="960"
           decoding="async"
@@ -82,15 +84,39 @@ export const prerender = true;
         />
         </div>        
       </div>
-      <Image
-        src={`/media/work/${slug}/${galleryImg2}`}
-        alt={`${title} Second gallery image`} 
-        class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
-        width="1280" 
-        height="960"
-        decoding="async"
-        loading="lazy"
-      />
+      {gallerySideImg2 && (
+        <Image
+          src={`/media/work/${slug}/${galleryImg2}`}
+          alt={`${title} Second gallery image`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+      )}
+      {galleryImg3 && (
+        <Image
+          src={`/media/work/${slug}/${galleryImg3}`}
+          alt={`${title} Second gallery image`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+      )}
+      {galleryImg4 && (
+        <Image
+          src={`/media/work/${slug}/${galleryImg4}`}
+          alt={`${title} Second gallery image`} 
+          class="w-full object-cover rounded-2xl bg-[#f2f2f2]"
+          width="1280" 
+          height="960"
+          decoding="async"
+          loading="lazy"
+        />
+      )}
     </section>
   </div>
 </BaseLayout>

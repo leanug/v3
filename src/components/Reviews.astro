@@ -1,0 +1,68 @@
+---
+// Step 3: Testimonial Grid with Hardware-Style Card Design
+const reviews = [
+  {
+    text: "Leandro was super helpful! Fast, and was able to fix some problems with the original design I gave him. I highly recommend!",
+    name: "Michelle K.",
+    location: "Panama",
+  },
+  {
+    text: "I can recommend the seller. All is like described and just in time.",
+    name: "@iduacom",
+    location: "Bulgaria",
+  },
+  {
+    text: "It was great. He delivered on time and did a very good job.",
+    name: "Daniel K.",
+    location: "Israel",
+  },
+  {
+    text: "It was great. He delivered on time and did a very good job.",
+    name: "Daniel K.",
+    location: "Israel",
+  }
+];
+---
+
+<section class="py-12 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <h2 class="text-4xl font-bold text-neutral-900 mb-4 tracking-tight">Reviews from past clients</h2>
+        <p class="text-neutral-500 max-w-md leading-relaxed">
+          Short reviews from clients I've collaborated with on freelance projects via Fiverr.
+        </p>
+      </div>
+      
+      <a href="#" class="inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-lg text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">
+        <div class="w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center">
+           <span class="text-[10px] text-white font-bold">f</span>
+        </div>
+        My Fiverr Reviews
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {reviews.map((review) => (
+        <div class="bg-neutral-50 rounded-2xl p-8 flex flex-col justify-between border border-transparent hover:border-neutral-200 transition-all duration-300">
+          <p class="text-neutral-700 text-lg leading-snug mb-8 italic">
+            “{review.text}”
+          </p>
+          
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-neutral-200 rounded-lg flex-shrink-0"></div>
+            
+            <div class="flex flex-col">
+              <span class="font-bold text-neutral-900 leading-none">{review.name}</span>
+              <div class="flex items-center gap-1 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-neutral-400"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="text-xs text-neutral-400 uppercase tracking-wider">{review.location}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

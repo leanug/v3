@@ -1,0 +1,45 @@
+---
+import LinkCircleLinear from "./icons/LinkCircleLinear.astro"
+import DocumentTextLinear from "./icons/DocumentTextLinear.astro"
+
+const { outbound, more, slug } = Astro.props;
+---
+
+<div class="absolute bottom-3 right-3 flex flex-col gap-2 items-end z-20">
+
+  {outbound && (
+    <a
+      href={outbound}
+      target="_blank"
+      class="group flex flex-row-reverse items-center bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-white transition-all duration-300 h-9 w-9 hover:w-[120px] rounded-lg shadow-sm overflow-hidden"
+    >
+      <!-- Icon (always on the right) -->
+      <div class="flex items-center justify-center w-9 h-9 shrink-0">
+        <LinkCircleLinear class="text-black" />
+      </div>
+
+      <!-- Text (reveals to the left) -->
+      <span class="mr-2 text-sm text-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        Live Site
+      </span>
+    </a>
+  )}
+
+  {more && (
+    <a
+      href={`/work/${slug}`}
+      class="group flex flex-row-reverse items-center bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-white transition-all duration-300 h-9 w-9 hover:w-[130px] rounded-lg shadow-sm overflow-hidden"
+    >
+      <!-- Icon (always on the right) -->
+      <div class="flex items-center justify-center w-9 h-9 shrink-0">
+        <DocumentTextLinear class="text-black" />
+      </div>
+
+      <!-- Text (reveals to the left) -->
+      <span class="mr-2 text-sm text-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        Case Study
+      </span>
+    </a>
+  )}
+
+</div>

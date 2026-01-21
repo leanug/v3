@@ -1,0 +1,56 @@
+---
+// Step 1: Placeholder Slider with Neutral Grays
+type Props = {
+  count?: number; // Number of rectangles to test
+  interval?: number;
+};
+
+const { count = 4, interval = 3000 } = Astro.props;
+
+// Generate an array of indices for the placeholders
+const placeholders = Array.from({ length: count }, (_, i) => i);
+---
+
+<div
+  class="relative aspect-[3/2] overflow-hidden rounded-xl bg-neutral-900 border border-neutral-800 shadow-2xl"
+  data-slider
+  data-interval={interval}
+>
+  {placeholders.map((i) => (
+    <div
+      class={`absolute inset-0 h-full w-full flex items-center justify-center transition-opacity duration-700 ${
+        i === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'
+      }`}
+      style={`background-color: rgb(${40 + i * 10}, ${40 + i * 10}, ${45 + i * 10});`} 
+    >
+      {/* Visual aid to see the slide number */}
+      <span class="text-neutral-500 font-mono text-sm uppercase tracking-widest">
+        Buffer_0{i + 1}
+      </span>
+    </div>
+  ))}
+</div>
+
+<script is:inline>
+  document.querySelectorAll('[data-slider]').forEach((slider) => {
+    const slides = slider.querySelectorAll('div[class*="absolute"]');
+    const interval = Number(slider.dataset.interval) || 3000;
+
+    if (slides.length <= 1) return;
+
+    let index = 0;
+
+    setInterval(() => {
+      // Fade out current
+      slides[index].classList.replace('opacity-100', 'opacity-0');
+      slides[index].classList.replace('z-10', 'z-0');
+
+      // Increment
+      index = (index + 1) % slides.length;
+
+      // Fade in next
+      slides[index].classList.replace('opacity-0', 'opacity-100');
+      slides[index].classList.replace('z-0', 'z-10');
+    }, interval);
+  });
+</script>

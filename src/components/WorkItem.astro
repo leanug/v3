@@ -1,109 +1,24 @@
 ---
-import { Image } from 'astro:assets';
+import Media from './MediaRenderer.astro';
+import CardActions from './CardActions.astro';
 
-const { slug, img, title, outbound, tags, more, video } = Astro.props;
+const { slug, img, title, outbound, more, video } = Astro.props;
 ---
 
-<article class="relative">
-  {more ? (
-    <a 
-      href={`/work/${slug}`} 
-      class="block overflow-hidden rounded-lg group"
-    >
-      {video ? (
-        <video
-          class="w-full h-full aspect-[4/3] object-cover rounded-lg bg-[#f2f2f2]"
-          width="1280"
-          height="960"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          <source src={`/media/work/${slug}/${video}`} type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      ) : (
-        <Image
-          transition:name={`img-${slug}`}
-          src={`/media/work/${slug}/${img}`}
-          alt={`Cover of ${title}`} 
-          class="w-full object-cover rounded-lg bg-[#f2f2f2]"
-          width="1280" 
-          height="960"
-          decoding="async"
-          loading="lazy"
-        />
-      )}
-    </a>
-  ) : (
-    <div class="overflow-hidden rounded-lg group">
-      {video ? (
-        <video
-          class="w-full object-cover rounded-lg bg-[#f2f2f2]"
-          width="1280"
-          height="960"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          <source src={video} type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      ) : (
-        <Image
-          transition:name={`img-${slug}`}
-          src={`/media/work/${slug}/${img}`}
-          alt={`Cover of ${title}`} 
-          class="w-full object-cover rounded-lg bg-[#f2f2f2]"
-          width="1280" 
-          height="960"
-          decoding="async"
-          loading="lazy"
-        />
-      )}
-    </div>
-  )}
-
-  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-3">
-    <div class="flex gap-3 items-center">
-      <h2>{title}</h2>
-      {outbound && (
-        <a 
-          href={outbound} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="flex gap-2 text-sm items-center border border-gray-300 hover:bg-gray-200 transition px-3 h-8 rounded-lg"
-        >
-          Open
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-          </svg>
-        </a>
-      )}
-
-      {more && (
-        <a 
-          href={`/work/${slug}`} 
-          class="flex gap-1 text-sm items-center border border-gray-300 hover:bg-[#f2f2f2] transition pl-3 pr-2 h-8 rounded-lg"
-        >
-          Case Study
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      )}
-    </div>
-    
-    {tags && (
-      <ul class="flex flex-wrap gap-3 text-sm">
-        {tags.map((tag: string) => (
-          <li class="px-3 h-8 rounded-md flex items-center bg-gray-200 text-gray-700">
-            {tag}
-          </li>
-        ))}
-      </ul>
+<article class="relative group">
+  <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+    {/* Use a fragment to avoid repeating logic */}
+    {more ? (
+      <a href={`/work/${slug}`} class="block w-full h-full">
+        <Media {slug} {img} {video} {title} {more} />
+      </a>
+    ) : (
+      <div class="w-full h-full">
+        <Media {slug} {img} {video} {title} {more} />
+      </div>
     )}
+
+    {/* Hover Actions */}
+    <CardActions {outbound} {more} {slug} />
   </div>
 </article>

@@ -19,44 +19,92 @@ const description = "Thoughtful Web development that helps businesses and creato
 ---
 
 <BaseLayout {title} {description}>
-  <section class="my-8 md:mb-12 lg:mb-20 md:mt-24">
-     <div class="grid gap-4 xl:gap-8 sm:grid-cols-1 xl:grid-cols-2 items-start">
-      <div>
-        <h1 class="heading-hero mt-2.5"> 
-          Web Developer & Designer from Uruguay
-        </h1>
+  <section class="my-8 md:mb-12 lg:mb-10 md:mt-20">
+
+    <div class="max-w-4xl text-center mx-auto">
+      <!-- Availability badge -->
+      <div class="inline-flex items-center gap-3 px-4 mb-5 rounded-full text-md text-white">
+        <span class="flex items-center gap-2 rounded-full">
+          <span class="relative flex size-3">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex size-3 rounded-full bg-green-500"></span>
+          </span>
+        </span>
+        <span class="text-gray-300">
+          Available for remote UI design and development projects
       </div>
-      <div class="xl:pl-20">
-        <p class="text-balance mb-2 text-gray-500 lg:text-lg leading-relaxed">
-          Hello, I'm Leandro 👋🏻 and I design and develop websites that help businesses stand out, communicate clearly, and turn visitors into clients.
-        </p>
-        <div class="flex gap-3 flex-wrap mt-10 md:mt-8">
-          <span 
-            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-          >
-            Figma
-          </span>
-          <span 
-            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-          >
-            Astro.js
-          </span>
-          <span 
-            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-          >
-            Webflow
-          </span>
-          <span 
-            class="flex gap-2 text-sm items-center border border-gray-300 select-none px-3 h-8 rounded-lg"
-          >
-            Framer
-          </span>
-        </div>
+
+      <!-- H1 -->
+      <h1 class="text-white font-medium leading-tight
+                text-xl sm:text-3xl md:text-5xl text-balance">
+        Web Developer and UI<br />
+        Designer from Uruguay
+      </h1>
+
+      <!-- Description -->
+      <p class="mt-5 text-xl text-white/70 max-w-2xl mx-auto text-balance">
+        Hello, I'm Leandro and I 
+        <span class="font-medium text-white">design and develop websites</span> that help
+        businesses stand out and <span class="font-medium text-white">turn visitors into clients</span>.
+      </p>
+
+      <!-- CTA -->
+      <div class="mt-10 flex gap-2.5 justify-center flex-wrap">
+        <a
+          href="mailto:hello@example.com"
+          class="inline-flex items-center justify-center
+                rounded-xl bg-white px-6 h-11
+                text-base font-medium text-black
+                hover:bg-white/80 transition"
+        >
+          Send me an email
+        </a>
+        <a
+          href="mailto:hello@example.com"
+          class="inline-flex items-center justify-center
+                rounded-xl px-6 h-11
+                text-white font-medium text-base
+                hover:text-gray-300 hover:bg-white/10 transition"
+        >
+          My services
+        </a>
       </div>
     </div>
+
+    <div class="flex gap-3 flex-wrap mt-10 md:mt-16 items-center justify-center">
+      <span class="mr-5">
+        My stack
+      </span>
+      <span 
+        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
+      >
+        Figma
+      </span>
+      <span 
+        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
+      >
+        Astro.js
+      </span>
+      <span 
+        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
+      >
+        Webflow
+      </span>
+      <span 
+        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
+      >
+        Framer
+      </span>
+        <span 
+        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
+      >
+        Inkscape
+      </span>
+    </div>
   </section>
+
   <section aria-label="Work Collection">
-    <div class="grid gap-8 sm:grid-cols-1 xl:grid-cols-2">
+    <div class="space-y-3">
       {work.map(({ data }: { data: Work['data'] }) => (
         <WorkItem
           img={data.img}

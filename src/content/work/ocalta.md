@@ -25,12 +25,12 @@ more: true
   I designed the full layout in <strong>Figma</strong>, focusing on clean structure, professional tone, and bilingual usability.
 </p>
 
-<ul class="divide-y divide-gray-200 border-y border-gray-200">
-  <li class="py-2"><span class="text-gray-500">CLIENT:</span> <a href="https://ocalta.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">ocalta.com</a></li>
-  <li class="py-3"><span class="text-gray-500">COUNTRY:</span> 🇲🇽 Mexico</li>
-  <li class="py-3"><span class="text-gray-500">TOOL:</span> Figma</li>
-  <li class="py-3"><span class="text-gray-500">PAGES:</span> ~6</li>
-  <li class="py-3"><span class="text-gray-500">DELIVERABLE:</span> Figma File</li>
-  <li class="py-3"><span class="text-gray-500">ROLE:</span> UI Designer</li>
-  <li class="py-3"><span class="text-gray-500">FOCUS:</span> Visual clarity, layout</li>
+<ul>
+  <li class="py-2"><span class="text-gray-400">CLIENT:</span> <a href="https://ocalta.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">ocalta.com</a></li>
+  <li class="py-2"><span class="text-gray-400">COUNTRY:</span> 🇲🇽 Mexico</li>
+  <li class="py-2"><span class="text-gray-400">TOOL:</span> Figma</li>
+  <li class="py-2"><span class="text-gray-400">PAGES:</span> ~6</li>
+  <li class="py-2"><span class="text-gray-400">DELIVERABLE:</span> Figma File</li>
+  <li class="py-2"><span class="text-gray-400">ROLE:</span> UI Designer</li>
+  <li class="py-2"><span class="text-gray-400">FOCUS:</span> Visual clarity, layout</li>
 </ul>

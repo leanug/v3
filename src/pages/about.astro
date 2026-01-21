@@ -2,53 +2,37 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = "About me";
-const description = "Learn more about the coder behind the keyboard.";
+const description = "Learn more about the developer behind the keyboard.";
 ---
 
 <BaseLayout {title} {description}>
-  <section class="my-8 md:mb-12 md:mt-16 max-w-3xl">
-    <div>
-      <span class="font-medium text-sm uppercase">
-        My Path in Web Development
-      </span>
-      <h1 class="heading-hero mt-2.5">
-        A Bit About Me
-      </h1>
-    </div>
-  </section>
 
-  <section class="mt-8 md:mt-16">
+  <section class="mt-8 md:mt-12">
     <div class="max-w-2xl">
-      <h2 class="font-semibold text-xl md:text-3xl mb-4">
+
+      <span class="font-medium text-sm uppercase">
+        About
+      </span>
+      <h1 class="heading-hero mt-2.5 mb-10 text-3xl md:text-4xl lg:text-5xl font-medium text-balance"> 
         What Led Me Here
-      </h2>
-      <p class="text-base leading-relaxed mb-6">
+      </h1>
+
+      <p class="text-base leading-relaxed mb-6 text-gray-300">
         I'm from Montevideo, Uruguay.
       </p>
-      <p class="text-base leading-relaxed mb-6">
-I first got into web development in 2008, trying to start a MySpace layout business. The problem was, I wasn't a great designer and I quickly realized I couldn't compete with what was already out there. So I quit, leaving my half-finished website behind.      </p>
-      <p class="text-base leading-relaxed mb-6">
+
+      <p class="text-base leading-relaxed mb-6 text-gray-300">
+        I first got into web development in 2008, trying to start a MySpace layout business. The problem was, I wasn't a great designer and I quickly realized I couldn't compete with what was already out there. So I quit, leaving my half-finished website behind.
+      </p>
+
+      <p class="text-base leading-relaxed mb-6 text-gray-300">
         Around 2010, I built a network of Flash game websites that ended up getting a good amount of traffic. I used plain PHP, MySQL, and HTML, and learned a lot just by doing. Things changed in 2012 after Google shifted its algorithm, and I had to start over. That's when I got into WordPress and freelancing.
       </p>
-      <p class="text-base leading-relaxed mb-6">
+
+      <p class="text-base leading-relaxed mb-6 text-gray-300">
         Over time, I picked up React, Webflow, and a bit of UI design along the way. It's been a slow build, full of trial and error, but that's how I've learned most of what I know.
       </p>
 
-      <h2 class="font-semibold text-xl md:text-3xl mt-10 mb-4">
-        What I'm Working On
-      </h2>
-      <p class="text-base leading-relaxed mb-6">
-        These days, I mostly work as a freelance Webflow developer, helping clients launch clean, responsive websites.
-      </p>
-      <p class="text-base leading-relaxed mb-6">
-        I'm also diving deeper into Framer and Astro.js to explore different ways of building faster, smoother sites.
-      </p>
-      <p class="text-base leading-relaxed mb-6">
-        My current goal is to launch a few premium template stores, where I can put everything I've learned into practice—clean UI, solid performance, and subtle interactions.
-      </p>
-      <p class="text-base leading-relaxed mb-6">
-        To promote those sites, I'm also building a YouTube channel (@scriptingpixels) where I share web development and design tutorials. It's a way to document what I've learned, reach more people, and build an audience around the work I'm doing.
-      </p>
     </div>
   </section>
 </BaseLayout>

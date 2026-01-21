@@ -25,16 +25,13 @@ more: true
   I also integrated <code>Swiper.js</code> to power the carousels, adding subtle interactivity while keeping the overall experience <strong>lightweight</strong> and <strong>accessible</strong>.
 </p>
 
-<ul class="divide-y divide-gray-200 border-y border-gray-200">
-  <li class="py-2"><span class="text-gray-500">CLIENT:</span> <a href="https://mutaxmk.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">mutaxmk.com</a></li>
-  <li class="py-3"><span class="text-gray-500">COUNTRY:</span> 🇵🇦 Panama</li>
-  <li class="py-3"><span class="text-gray-500">WEB BUILDER:</span> Webflow</li>
-  <li class="py-3"><span class="text-gray-500">PAGES:</span> 10</li>
-  <li class="py-3"><span class="text-gray-500">DESIGN:</span> Provided by client</li>
-  <li class="py-3"><span class="text-gray-500">ROLE:</span> Webflow Developer</li>
-  <li class="py-3"><span class="text-gray-500">FOCUS:</span> Clean layout, ease of use, mobile responsiveness</li>
+<ul>
+  <li class="py-2"><span class="text-gray-400">CLIENT:</span> <a href="https://mutaxmk.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">mutaxmk.com</a></li>
+  <li class="py-2"><span class="text-gray-400">COUNTRY:</span> 🇵🇦 Panama</li>
+  <li class="py-2"><span class="text-gray-400">WEB BUILDER:</span> Webflow</li>
+  <li class="py-2"><span class="text-gray-400">PAGES:</span> 10</li>
+  <li class="py-2"><span class="text-gray-400">DESIGN:</span> Provided by client</li>
+  <li class="py-2"><span class="text-gray-400">ROLE:</span> Webflow Developer</li>
 </ul>
-
-
 
 

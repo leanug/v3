@@ -1,27 +1,9 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const title = "Services";
-const description = "How I Can Help You Build & Grow";
----
-
-<BaseLayout {title} {description}>
-  <section class="my-8 md:mb-12 md:mt-16 max-w-3xl">
-    <div>
-     <span class="font-medium text-sm uppercase">
-        Services
-      </span>
-      <h1 class="heading-hero mt-2.5 text-3xl md:text-4xl lg:text-5xl font-medium text-balance"> 
-        What I can help you with
-      </h1>
-    </div>
-  </section>
-  <section 
+<section 
     aria-label="services tables" 
-    class="mt-8 md:mt-16 mb-10"
+    class="mt-8 md:mt-16"
   >
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-      <div class="w-full flex flex-col p-6 border justify-between border-white/25 rounded-xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+      <div class="w-full flex flex-col p-6 border justify-between border-gray-300 rounded-xl">
         <div>
           <span class="text-sm">Website Design</span>
           <h2 class="font-semibold text-2xl mt-2 mb-8">
@@ -29,7 +11,7 @@ const description = "How I Can Help You Build & Grow";
             I create designs that balance usability and aesthetics. 
           </h2>
           <div class="text-lg space-y-2 mb-8">
-            <p class="text-zinc-400">
+            <p>
               Every project is built with a focus on clean visuals, 
               smooth user experience, and a structure that just makes sense.         
             </p>
@@ -67,16 +49,16 @@ const description = "How I Can Help You Build & Grow";
         </div>
       </div>
 
-      <div class="w-full flex flex-col p-6 border justify-between border-white/25 rounded-xl">
+      <div class="w-full flex flex-col p-6 border justify-between border-gray-300 rounded-xl">
         <div class="flex flex-col justify-between w-full">
           <span class="text-sm">Web Development</span>
           <h2 class="font-semibold text-2xl mt-2 mb-8">
-            From Figma to Webflow, Framer, or Astro.
-            Responsive, clean builds that are well optimized and easy to maintain.
+            I build custom, interactive websites using Webflow and Astro.js. 
+            Every site is responsive, well-optimized, and easy to maintain. 
           </h2>
         </div>
         <div class="text-lg space-y-2 mb-8">
-          <p class="text-zinc-400">
+          <p>
             Need animations? I make sure they're smooth, lightweight, 
             and enhance the user experience, without slowing things down.
           </p>
@@ -124,23 +106,27 @@ const description = "How I Can Help You Build & Grow";
         </ul>
       </div>
 
-      <div class="w-full flex flex-col p-6 border justify-between border-white/25 rounded-xl">
+      <div class="w-full flex flex-col p-6 border justify-between border-gray-300 rounded-xl">
         <div>
           <div class="flex flex-col justify-between w-full">
-            <span class="text-sm">Product Design</span>
+            <span class="text-sm">Landing Pages</span>
             <h2 class="font-semibold text-2xl mt-2 mb-8">
-              Product design focused on usability, consistency, and long-term scalability.         
+              High-converting, fast-loading landing pages that focus on one thing, getting results.          
             </h2>
           </div>
           <div class="text-lg space-y-2 mb-8">
-            <p class="text-zinc-400">
-              It typically ranges from $150 per screen, depending on complexity.
+            <p>
+              Whether it's for a product launch, a signup page, or a sales funnel, 
+              each page is optimized for speed, responsiveness, and user engagement. 
+            </p>
+            <p>
+              No distractions, just clean design and smooth interactions that drive action.
             </p>
           </div>
         </div>
         <div>
-          <p class="text-lg">Starting at </p>
-          <span class="text-2xl font-bold">$150 / screen</span>
+          <p class="text-lg">Starting at</p>
+          <span class="text-2xl font-bold">$1000</span>
           <ul class="space-y-2 mt-8">
             <li class="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -177,4 +163,3 @@ const description = "How I Can Help You Build & Grow";
       </div>
     </div>
   </section>
-</BaseLayout>

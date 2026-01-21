@@ -7,13 +7,8 @@ import Logo from "./Logo.astro"
     <a href="/" class="flex items-center gap-2.5">
       <Logo />
     </a>
-     <div class="hidden md:flex gap-y-4 text-sm font-medium gap-8 mr-4">
-        <a href="/" class="relative inline-block group">
-          <span class="block transition-transform duration-300 group-hover:-translate-y-1">
-            Home
-          </span>
-        </a>
-
+    <div class="flex gap-4 items-center">
+      <div class="hidden md:flex gap-y-4 text-sm font-medium gap-8 mr-4">
         <a href="/about" class="relative inline-block group">
           <span class="block transition-transform duration-300 group-hover:-translate-y-1">
             About me
@@ -32,12 +27,14 @@ import Logo from "./Logo.astro"
           </span>
         </a>
       </div>
-    <div class="flex gap-4 items-center">
       <a
-        href="mailto:leandroubilla@protonmail.com"
-        class="bg-gray-900 px-4 h-9 md:flex items-center rounded-lg text-white hover:opacity-80 shadow-lg hover:shadow-md transition-shadow duration-200 font-semibold hidden text-sm"
+        href="mailto:hello@example.com"
+        class="inline-flex items-center justify-center
+              rounded-lg h-9 px-4 py-2 border border-white/25
+              text-sm font-medium text-white
+              hover:bg-white/10 transition"
       >
-        Send an Email
+        Contact me
       </a>
       <button         
         class="hover:cursor-pointer hamburger -mx-[3px]"
