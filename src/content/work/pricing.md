@@ -5,8 +5,8 @@ img: "cover.webp"
 slug: 'pricing-tables'
 description: "Pricing tables I did for my portfolio, personal project"
 tags: ["Figma"]
-published: true
-featured: true
+published: false
+featured: false
 more: false
 ---
 
