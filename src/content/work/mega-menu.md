@@ -10,7 +10,7 @@ slug: "keyforge-menu"
 description: "Keyforge Mega Menu"
 tags: [Figma"]
 outbound: 
-published: true
-featured: true
+published: false
+featured: false
 more: false
 ---
