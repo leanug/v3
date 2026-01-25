@@ -1,13 +1,13 @@
 ---
-title: "Meyforge Mega Menu"
-date: 2026-1-07
+title: "Mega Menu"
+date: 2026-1-24
 img: "cover.webp"
 galleryImg1: 
 galleryImg2: 
 gallerySideImg1: 
 gallerySideImg2: 
-slug: "keyforge-menu"
-description: "Keyforge Mega Menu"
+slug: "mega-menu"
+description: "Mega Menu"
 tags: [Figma"]
 outbound: 
 published: false

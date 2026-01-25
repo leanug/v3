@@ -6,7 +6,7 @@ galleryImg1: "gallery-img-1.webp"
 galleryImg2: "gallery-img-2.webp"
 gallerySideImg1: "gallery-side-img-1.webp"
 gallerySideImg2: "gallery-side-img-2.webp"
-slug: "simjati"
+slug: "aeroservicios"
 description: "Share document"
 tags: ["Webflow"]
 outbound: "https://www.simjaticlub.com/"
