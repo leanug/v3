@@ -5,8 +5,8 @@ img: "cover.webp"
 slug: 'addpulse-dashboard'
 description: "Marketing dashboard. Personal project."
 tags: ["Figma"]
-published: true
-featured: true
+published: false
+featured: false
 ---
 
 Marketing dashboard, personal project.
