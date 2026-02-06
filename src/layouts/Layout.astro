@@ -6,8 +6,8 @@ import '../styles/global.css'
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 
 import Overlay from '../components/Overlay.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro'
 ---
 
 <!doctype html>
@@ -39,34 +39,15 @@ import Footer from '../components/Footer.astro'
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-    <!-- Prevent flash of unstyled content (FOUC) on first paint.
-     Hide body until styles are applied, then fade it in.
-     Note: This is a workaround, not a perfect fix. -->
-
-    <style is:inline>
-      body {
-        visibility: hidden;
-        opacity: 0;
-      }
-    </style>
-
-    <style is:global>
-      body {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 0.2s linear, opacity 0.2s linear;
-      }
-    </style>
-
     <ClientRouter />
     <SpeedInsights/> 
 	</head>
 	<body>
-    <div class="relative leading-tightest">
+    <div data-theme="black" class="relative leading-tightest">
       <div class="bg-black flex justify-center text-white">
         <div class="flex flex-col w-full min-h-screen xs:px-10 md:mx-16 mx-2.5">
-          <Header />
-          <main class="flex-grow max-w-5xl w-full mx-auto">
+          <Navbar />
+          <main class="grow max-w-5xl w-full mx-auto">
             <slot />
           </main>
           <Footer />

@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, cupcake, black;
+}
 
 @theme {
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont,

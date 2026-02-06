@@ -5,8 +5,8 @@ img: "cover.webp"
 slug: "dark-dashboard"
 description: "Dark Mode Dashboard"
 tags: ["Figma"]
-published: true
-featured: true
+published: false
+featured: false
 ---
 
 Dark Mode Dashboard
