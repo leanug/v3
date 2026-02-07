@@ -17,9 +17,6 @@ package-lock.json
 .eslintcache
 .pnpm-store
 
-# ignore built website media files
-public/media/work/**
-
 # do not commit .env files or any files that end with `.env`
 *.env
 
