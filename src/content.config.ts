@@ -11,6 +11,8 @@ const work = defineCollection({
     galleryImg2: z.string().optional(),
     gallerySideImg1: z.string().optional(),
     gallerySideImg2: z.string().optional(),
+    galleryImg3: z.string().optional(),
+    galleryImg4: z.string().optional(),
 
     // content
     description: z.string(),

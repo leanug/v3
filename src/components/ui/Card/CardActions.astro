@@ -1,12 +1,11 @@
 ---
-import LinkCircleLinear from "./icons/LinkCircleLinear.astro"
-import DocumentTextLinear from "./icons/DocumentTextLinear.astro"
+import LinkCircleLinear from "../../icons/LinkCircleLinear.astro";
+import DocumentTextLinear from "../../icons/DocumentTextLinear.astro"
 
 const { outbound, more, slug } = Astro.props;
 ---
 
 <div class="absolute bottom-3 right-3 flex flex-col gap-2 items-end z-20">
-
   {outbound && (
     <a
       href={outbound}
@@ -41,5 +40,4 @@ const { outbound, more, slug } = Astro.props;
       </span>
     </a>
   )}
-
 </div>

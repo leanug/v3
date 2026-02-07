@@ -1,9 +1,8 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import BaseLayout from '../layouts/Layout.astro';
-import WorkItem from '../components/WorkItem.astro';
-import type { Work } from '../types/index';
+import Layout from '../layouts/Layout.astro';
+import WorkItem from '../components/work/WorkItem.astro';
 
 const work: CollectionEntry<'work'>[] = (await getCollection('work'))
   .filter((entry: CollectionEntry<'work'>) => entry.data.published === true)
@@ -16,7 +15,7 @@ const title = "Leandro Ubilla - Web developer";
 const description = "Thoughtful Web development that helps businesses and creators craft meaningful user journeys with a focus on design, functionality, and performance.";
 ---
 
-<BaseLayout {title} {description}>
+<Layout {title} {description}>
   <section class="my-8 md:mb-12 lg:mb-10 md:mt-20">
 
     <div class="max-w-4xl text-center mx-auto">
@@ -33,15 +32,14 @@ const description = "Thoughtful Web development that helps businesses and creato
       </div>
 
       <!-- H1 -->
-      <h1 class="text-white font-medium leading-tight
+      <h1 class="font-medium leading-tight
                 text-2xl sm:text-3xl md:text-5xl text-balance">
-        Web Developer and UI<br />
-        Designer from Uruguay
+        Web Development and Product Design for Businesses and Makers
       </h1>
 
       <!-- Description -->
       <p class="mt-5 text-xl text-white/70 max-w-2xl mx-auto text-balance">
-        Hello, I'm Leandro and I 
+        Hello, I'm Leandro from Uruguay and I 
         <span class="font-medium text-white">design and develop websites</span> that help
         businesses stand out and <span class="font-medium text-white">turn visitors into clients</span>.
       </p>
@@ -50,19 +48,13 @@ const description = "Thoughtful Web development that helps businesses and creato
       <div class="mt-10 flex gap-2.5 justify-center flex-wrap">
         <a
           href="mailto:leandroubilla@protonmail.com"
-          class="inline-flex items-center justify-center
-                rounded-xl bg-white px-6 h-11
-                text-base font-medium text-black
-                hover:bg-white/80 transition"
+          class="btn btn-primary rounded-md btn-lg"
         >
-          Send me an email
+          Message me
         </a>
         <a
           href="/services"
-          class="inline-flex items-center justify-center
-                rounded-xl px-6 h-11
-                text-white font-medium text-base
-                hover:text-gray-300 hover:bg-white/10 transition"
+          class="btn btn-outline rounded-md btn-lg"
         >
           My services
         </a>
@@ -103,17 +95,16 @@ const description = "Thoughtful Web development that helps businesses and creato
 
   <section aria-label="Work Collection">
     <div class="space-y-3">
-      {work.map(({ data }: { data: Work['data'] }) => (
+      {work.map((entry) => (
         <WorkItem
-          img={data.img}
-          title={data.title}
-          tags={data?.tags}
-          outbound={data?.outbound}
-          slug={data.slug}
-          more={data?.more || false}
-          video={data?.video || false}
+          img={entry.data.img}
+          title={entry.data.title}
+          tags={entry.data?.tags}
+          outbound={entry.data?.outbound}
+          slug={entry.slug}
+          more={entry.data?.more || false}
         />
       ))}
     </div>
   </section>
-</BaseLayout>
+</Layout>

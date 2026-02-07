@@ -1,12 +1,12 @@
 ---
-import Media from './MediaRenderer.astro';
-import CardActions from './CardActions.astro';
+import Media from '../ui/MediaRenderer.astro';
+import CardActions from '../ui/Card/CardActions.astro';
 
 const { slug, img, title, outbound, more, video } = Astro.props;
 ---
 
 <article class="relative group">
-  <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
+  <div class="relative overflow-hidden rounded-2xl aspect-4/3">
     {/* Use a fragment to avoid repeating logic */}
     {more ? (
       <a href={`/work/${slug}`} class="block w-full h-full">

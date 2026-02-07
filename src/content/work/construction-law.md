@@ -1,12 +1,11 @@
 ---
 title: "Construction Law"
-date: 2026-1-28
+date: 2026-01-28
 img: "cover.webp"
-galleryImg1: 
-galleryImg2: 
-gallerySideImg1: 
-gallerySideImg2: 
-slug: "construction-law"
+galleryImg1: ""
+galleryImg2: ""
+gallerySideImg1: ""
+gallerySideImg2: ""
 description: ""
 tags: ["Figma"]
 published: false

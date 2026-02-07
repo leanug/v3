@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Folder with your markdown / Astro files
-const folderPath = './content'; // change this to your folder
+const folderPath = './src/content/work'; // change this to your folder
 
 function removeSlugFromFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf-8');

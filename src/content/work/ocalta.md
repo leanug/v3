@@ -6,7 +6,6 @@ galleryImg1: "work-ocalta-gallery-img-1.webp"
 galleryImg2: "work-ocalta-gallery-img-2.webp"
 gallerySideImg1: "work-ocalta-gallery-side-img-1.webp"
 gallerySideImg2: "work-ocalta-gallery-side-img-2.webp"
-slug: "ocalta"
 description: "Construction company website design"
 tags: ["Figma", "UI Design"]
 outbound: "https://www.ocalta.com"
