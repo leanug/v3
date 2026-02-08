@@ -9,8 +9,8 @@ gallerySideImg2: "gallery-side-img-2.webp"
 description: "Share document"
 tags: ["Webflow"]
 outbound: "https://www.simjaticlub.com/"
-published: false
-featured: false
+published: true
+featured: true
 more: true
 ---
 
