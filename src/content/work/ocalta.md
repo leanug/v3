@@ -9,7 +9,7 @@ gallerySideImg2: "work-ocalta-gallery-side-img-2.webp"
 description: "Construction company website design"
 tags: ["Figma", "UI Design"]
 outbound: "https://www.ocalta.com"
-published: true
+published: false
 featured: true
 more: true
 order: 170

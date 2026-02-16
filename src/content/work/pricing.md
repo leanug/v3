@@ -7,6 +7,7 @@ tags: ["Figma"]
 published: false
 featured: false
 more: false
+order: 20
 ---
 
 Pricing tables I did for my portfolio, personal project

@@ -6,6 +6,7 @@ description: "Pricing Tables"
 tags: ["Figma"]
 published: true
 featured: true
+order: 10
 ---
 
 Web App Create Projects Forms

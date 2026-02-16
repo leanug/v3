@@ -15,11 +15,9 @@ export async function getStaticPaths() {
 const { data } = Astro.props;
 const { 
   title, 
-  img, 
+  img,
   galleryImg1,
   galleryImg2,
-  gallerySideImg1,
-  gallerySideImg2,
   galleryImg3,
   galleryImg4,
 } = data;
@@ -31,7 +29,7 @@ export const prerender = true;
 ---
 
 <Layout title={`${title} - Portfolio`}>
-  <div class="flex flex-col gap-10">
+  <div class="flex flex-col gap-10 mt-3">
     <section class="flex flex-col gap-10">
       <Image
         transition:name={`img-${slug}`}
@@ -58,31 +56,7 @@ export const prerender = true;
         decoding="async"
         loading="lazy"
       />
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div>
-          <Image
-          src={`/media/work/${slug}/${gallerySideImg1}`}
-          alt={`${title} Side image 1`} 
-          class="w-full h-full object-cover rounded-2xl bg-[#f2f2f2]"
-          width="1280" 
-          height="960"
-          decoding="async"
-          loading="lazy"
-        />
-        </div>
-         <div>
-          <Image
-          src={`/media/work/${slug}/${gallerySideImg2}`}
-          alt={`${title} Side image 2`} 
-          class="w-full h-full object-cover rounded-2xl bg-[#f2f2f2]"
-          width="1280" 
-          height="960"
-          decoding="async"
-          loading="lazy"
-        />
-        </div>        
-      </div>
-      {gallerySideImg2 && (
+      {galleryImg2 && (
         <Image
           src={`/media/work/${slug}/${galleryImg2}`}
           alt={`${title} Second gallery image`} 
