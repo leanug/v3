@@ -1,7 +1,7 @@
 ---
 title: "Meetovo"
 date: 2024-04-04
-img: "cover.webp"
+img: "cover.png"
 galleryImg1: "1.webp"
 galleryImg2: "2.webp"
 galleryImg3: "3.webp"
@@ -10,7 +10,7 @@ tags: ["Figma", "Prototype", "Product Design", "UI Design"]
 published: true
 featured: false
 more: true
-order: 245
+order: 270
 ---
 
 <h2 class="mb-4 font-medium">About</h2>

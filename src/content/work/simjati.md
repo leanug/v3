@@ -9,7 +9,7 @@ gallerySideImg2: "gallery-side-img-2.webp"
 description: "Share document"
 tags: ["Webflow"]
 outbound: "https://www.simjaticlub.com/"
-published: true
+published: false
 featured: true
 more: true
 order: 10
