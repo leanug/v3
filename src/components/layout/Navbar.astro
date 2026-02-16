@@ -2,7 +2,7 @@
 import Logo from "../ui/Logo.astro"
 ---
 
-<header class="navbar bg-base-100 shadow-sm mt-3" transition:persist>
+<header class="navbar bg-base-200 mt-3" transition:persist>
   <div class="navbar-start">
     <div class="dropdown">
       <div aria-label="Open menu" tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -12,18 +12,6 @@ import Logo from "../ui/Logo.astro"
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><a href="/about" aria-label="About me">About</a></li>
-        <li>
-          <details>
-            <summary>Resources</summary>
-            <ul class="bg-base-100 rounded-t-none p-2">
-              <li>
-                <a href="https://owllayouts.com" aria-label="Corporate style design inspiration">
-                  Owl Layouts
-                </a>
-              </li>
-            </ul>
-          </details>
-        </li>
         <li><a href="/process" aria-label="Process">Process</a></li>
         <li><a href="/services" aria-label="Services">Services</a></li>
       </ul>
@@ -35,24 +23,12 @@ import Logo from "../ui/Logo.astro"
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="/about" aria-label="About me">About</a></li>
-      <li>
-        <details>
-          <summary>Resources</summary>
-          <ul class="bg-base-100 rounded-t-none p-2">
-            <li>
-              <a target="_blank" href="https://owllayouts.com" aria-label="Corporate style design inspiration">
-                Owl Layouts
-              </a>
-            </li>
-          </ul>
-        </details>
-      </li>
       <li><a href="/process" aria-label="Process">Process</a></li>
       <li><a href="/services" aria-label="Services">Services</a></li>
     </ul>
   </div>
   <div class="navbar-end">
-    <a href="mailto:leandroubilla@protonmail.com" class="btn btn-primary btn-sm rounded-md">Get in touch</a>
+    <a href="mailto:leandroubilla@protonmail.com" class="btn btn-neutral btn-sm rounded-md">Get in touch</a>
   </div>
 </header>
 

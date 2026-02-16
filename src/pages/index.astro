@@ -5,91 +5,70 @@ import Layout from '../layouts/Layout.astro';
 import WorkItem from '../components/work/WorkItem.astro';
 
 const work: CollectionEntry<'work'>[] = (await getCollection('work'))
-  .filter((entry: CollectionEntry<'work'>) => entry.data.published === true)
-  .sort(
-    (a: CollectionEntry<'work'>, b: CollectionEntry<'work'>) =>
-      new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-  );
+  .filter((entry) => entry.data.published === true)
+  .sort((a, b) => {
+    const orderA = a.data.order ?? -Infinity;
+    const orderB = b.data.order ?? -Infinity;
+
+    if (orderA !== orderB) {
+      return orderB - orderA; // higher order first
+    }
+
+    return (
+      new Date(b.data.date).getTime() -
+      new Date(a.data.date).getTime()
+    );
+  });
 
 const title = "Leandro Ubilla - Web developer";
 const description = "Thoughtful Web development that helps businesses and creators craft meaningful user journeys with a focus on design, functionality, and performance.";
 ---
 
 <Layout {title} {description}>
-  <section class="my-8 md:mb-12 lg:mb-10 md:mt-20">
+  <section class="my-8 md:mb-14 lg:mb-20 md:mt-20">
 
     <div class="max-w-4xl text-center mx-auto">
       <!-- Availability badge -->
-      <div class="inline-flex items-center gap-3 px-4 mb-5 rounded-full text-md text-white">
+      <div class="bg-base-100 inline-flex items-center gap-3 px-3 py-1.5 mb-5 rounded-full text-md text-white">
         <span class="flex items-center gap-2 rounded-full">
           <span class="hidden relative sm:flex size-3">
             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span class="relative inline-flex size-3 rounded-full bg-green-500"></span>
           </span>
         </span>
-        <span class="text-gray-300">
-          Available for remote UI design and development projects
+        <span class="text-base-content/70 text-sm">
+          Available for UI design and development projects
+        </span>
       </div>
 
       <!-- H1 -->
       <h1 class="font-medium leading-tight
-                text-2xl sm:text-3xl md:text-5xl text-balance">
+                text-2xl sm:text-3xl md:text-4xl text-balance">
         Web Development and Product Design for Businesses and Makers
       </h1>
 
       <!-- Description -->
-      <p class="mt-5 text-xl text-white/70 max-w-2xl mx-auto text-balance">
+      <p class="mt-5 md:text-md text-base-content/70 max-w-2xl mx-auto text-balance">
         Hello, I'm Leandro from Uruguay and I 
-        <span class="font-medium text-white">design and develop websites</span> that help
-        businesses stand out and <span class="font-medium text-white">turn visitors into clients</span>.
+        <span class="font-medium text-base-content">design and develop websites</span> that help
+        businesses stand out and <span class="font-medium text-base-content">turn visitors into clients</span>.
       </p>
 
       <!-- CTA -->
       <div class="mt-10 flex gap-2.5 justify-center flex-wrap">
         <a
           href="mailto:leandroubilla@protonmail.com"
-          class="btn btn-primary rounded-md btn-lg"
+          class="btn btn-neutral rounded-lg"
         >
           Message me
         </a>
         <a
           href="/services"
-          class="btn btn-outline rounded-md btn-lg"
+          class="btn btn-outline rounded-lg"
         >
           My services
         </a>
       </div>
-    </div>
-
-    <div class="flex gap-3 flex-wrap mt-10 md:mt-16 items-center justify-center">
-      <span class="mr-5">
-        My stack
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
-      >
-        Figma
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
-      >
-        Astro.js
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
-      >
-        Webflow
-      </span>
-      <span 
-        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
-      >
-        Framer
-      </span>
-        <span 
-        class="flex gap-2 text-sm items-center bg-white/6 select-none px-3 h-8 rounded-md"
-      >
-        Inkscape
-      </span>
     </div>
   </section>
 

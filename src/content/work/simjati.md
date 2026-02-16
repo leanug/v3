@@ -12,6 +12,7 @@ outbound: "https://www.simjaticlub.com/"
 published: true
 featured: true
 more: true
+order: 140
 ---
 
 <p class="mb-8">

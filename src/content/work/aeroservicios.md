@@ -1,7 +1,7 @@
 ---
 title: "Simjati Club"
 date: 2025-01-02
-img: "cover.webp"
+img: "cover.png"
 galleryImg1: "gallery-img-1.webp"
 galleryImg2: "gallery-img-2.webp"
 gallerySideImg1: "gallery-side-img-1.webp"
@@ -12,6 +12,7 @@ outbound: "https://www.simjaticlub.com/"
 published: false
 featured: false
 more: true
+order: 250
 ---
 
 <p class="mb-8">
