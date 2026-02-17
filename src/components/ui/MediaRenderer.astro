@@ -14,7 +14,7 @@ const src = more ? `/media/work/${slug}/${video || img}` : (video || img);
   </video>
 ) : (
   <Image
-    transition:name={`img-${slug}`}
+    
     src={`/media/work/${slug}/${img}`}
     alt={`Cover of ${title}`} 
     class="w-full h-full object-cover rounded-lg aspect-4/3"

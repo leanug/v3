@@ -1,43 +1,17 @@
 ---
-import LinkCircleLinear from "../../icons/LinkCircleLinear.astro";
-import DocumentTextLinear from "../../icons/DocumentTextLinear.astro"
+import FileRight from "../../icons/FileRight.astro";
 
-const { outbound, more, slug } = Astro.props;
+const { more, slug } = Astro.props;
 ---
 
-<div class="absolute bottom-3 right-3 flex flex-col gap-2 items-end z-20">
-  {outbound && (
-    <a
-      href={outbound}
-      target="_blank"
-      class="group flex flex-row-reverse items-center bg-white/50 backdrop-blur-sm  hover:bg-white transition-all duration-300 h-12 w-12 hover:w-32 rounded-xl shadow-sm overflow-hidden"
-    >
-      <!-- Icon (always on the right) -->
-      <div class="flex items-center justify-center w-12 h-12 shrink-0">
-        <LinkCircleLinear class="text-black" />
-      </div>
-
-      <!-- Text (reveals to the left) -->
-      <span class="mr-2 text-sm text-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        Live Site
-      </span>
-    </a>
-  )}
-
-  {more && (
-    <a
-      href={`/work/${slug}`}
-      class="group flex flex-row-reverse items-center bg-white/50 backdrop-blur-sm  hover:bg-white transition-all duration-300 h-12 w-12 hover:w-36 rounded-xl shadow-sm overflow-hidden"
-    >
-      <!-- Icon (always on the right) -->
-      <div class="flex items-center justify-center w-12 h-12 shrink-0">
-        <DocumentTextLinear class="text-black" />
-      </div>
-
-      <!-- Text (reveals to the left) -->
-      <span class="mr-2 text-sm text-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-        Case Study
-      </span>
-    </a>
-  )}
-</div>
+{more && (
+  <a
+    href={`/work/${slug}`}
+    class="absolute bottom-4 right-4 z-20"
+  >
+    <div class="flex items-center gap-2 px-4 py-2.5 bg-black text-white text-xs font-medium rounded-full shadow-md hover:opacity-90 transition-opacity duration-200">
+      <FileRight class="w-4 h-4" />
+      <span class="font-medium">Case Study</span>
+    </div>
+  </a>
+)}
