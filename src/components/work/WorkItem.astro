@@ -1,8 +1,9 @@
 ---
-import Media from '../ui/MediaRenderer.astro';
 import CardActions from '../ui/Card/CardActions.astro';
+import { Image } from 'astro:assets';
 
 const { slug, img, title, outbound, more, video } = Astro.props;
+const imagePath = `/media/work/${slug}/${img}`;
 ---
 
 <article class="relative group">
@@ -10,11 +11,49 @@ const { slug, img, title, outbound, more, video } = Astro.props;
     {/* Use a fragment to avoid repeating logic */}
     {more ? (
       <a href={`/work/${slug}`} class="block w-full h-full">
-        <Media {slug} {img} {video} {title} {more} />
+        <Image
+          transition:name={`image-${slug}`}
+          src={imagePath}
+          alt={`Cover of ${title}`} 
+  
+          /* 1. Responsive widths: Mobile, Tablet, and the 1280px (7xl) cap */
+          widths={[400, 800, 1280]}
+          
+          /* 2. Logic: Full width on mobile, 1280px max on desktop */
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          
+          /* 3. Layout preservation */
+          width={1600} 
+          height={1200}
+          
+          /* 4. Performance & Styling */
+          decoding="async" 
+          loading="lazy"
+          class="w-full h-full object-cover rounded-lg aspect-4/3 bg-neutral-100"
+        />
       </a>
     ) : (
       <div class="w-full h-full">
-        <Media {slug} {img} {video} {title} {more} />
+        <Image
+          transition:name={`image-${slug}`}
+          src={imagePath}
+          alt={`Cover of ${title}`} 
+          
+          
+          widths={[400, 800, 1280]}
+          
+          
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          
+        
+          width={1600} 
+          height={1200}
+          
+        
+          decoding="async" 
+          loading="lazy"
+          class="w-full h-full object-cover rounded-lg aspect-4/3 bg-neutral-100"
+        />
       </div>
     )}
 

@@ -3,6 +3,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 import WorkItem from '../components/work/WorkItem.astro';
+import Plain2 from "../components/icons/Plain2.astro";
+import Widget5 from "../components/icons/Widget5.astro";
 
 const work: CollectionEntry<'work'>[] = (await getCollection('work'))
   .filter((entry) => entry.data.published === true)
@@ -29,43 +31,43 @@ const description = "Thoughtful Web development that helps businesses and creato
 
     <div class="max-w-4xl text-center mx-auto">
       <!-- Availability badge -->
-      <div class="bg-base-100 inline-flex items-center gap-3 px-3 py-1.5 mb-5 rounded-full text-md text-white">
+      <div class="bg-base-100 inline-flex items-center gap-2.5 px-3 py-1.5 mb-5 rounded-full text-md text-white">
         <span class="flex items-center gap-2 rounded-full">
           <span class="hidden relative sm:flex size-2.5">
             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
           </span>
         </span>
-        <span class="text-base-content/70 text-sm uppercase">
-          Available for UI Design & Development
+        <span class="text-base-content text-xs">
+          Open for design collaborations
         </span>
       </div>
 
       <!-- H1 -->
-      <h1 class="font-medium leading-tight
+      <h1 class="font-medium leading-[1.2] md:leading-[1.1]
                 text-2xl sm:text-3xl md:text-4xl text-balance">
-        Web Development and Product Design for Businesses and Makers
+        Web Development & <br /> Product Design
       </h1>
 
       <!-- Description -->
-      <p class="mt-5 md:text-md text-base-content/70 max-w-2xl mx-auto text-balance">
-        Hello, I'm Leandro from Uruguay and I 
-        <span class="font-medium text-base-content">design and develop websites</span> that help
-        businesses stand out and <span class="font-medium text-base-content">turn visitors into clients</span>.
+      <p class="mt-4 md:text-md text-base-content/70 max-w-2xl mx-auto text-balance">
+        I design clean interfaces and build fast websites.
       </p>
 
       <!-- CTA -->
-      <div class="mt-10 flex gap-2.5 justify-center flex-wrap">
+      <div class="mt-8 flex gap-2.5 justify-center flex-wrap">
         <a
           href="mailto:leandroubilla@protonmail.com"
-          class="btn btn-neutral rounded-lg"
+          class="btn btn-neutral rounded-lg pl-3.5 shadow-lg hover:shadow-xs tracking-normal"
         >
-          Message me
+          <Plain2 size={14} class="mr-0.5" />
+          Contact me
         </a>
         <a
           href="/services"
-          class="btn btn-outline rounded-lg"
+          class="btn bg-base-100 hover:bg-base-300 rounded-lg pl-3.5 border-none transition-all"
         >
+          <Widget5 size={14} class="mr-0.5" />
           My services
         </a>
       </div>
