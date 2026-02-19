@@ -1,107 +1,146 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = "Process";
-const description = "Building Your Website, Step by Step";
+const title = "Frequently Asked Questions";
+const description = "Everything you need to know before starting a project.";
 ---
 
 <Layout {title} {description}>
-  <section class="my-8 md:mb-12 md:mt-16 max-w-3xl">
-    <div>
-      <span class="font-medium text-sm uppercase">
-        A simple overview of how I usually work with clients.
-      </span>
-      <h1 class="heading-hero mt-2.5"> 
-        From first message to launch, here's how the process flows.
-      </h1>
+  <section class="max-w-3xl mx-auto py-16 px-6">
+    <div class="mb-10 text-center">
+      <h1 class="text-3xl font-medium">Frequently Asked Questions</h1>
+      <p class="text-base-content/70 mt-2">
+        Everything you need to know before starting a project.
+      </p>
     </div>
-  </section>
-  <section 
-    aria-label="Web development process" 
-    class="mt-8 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-  >
-      <div>
-        <span class="text-sm">Step 01.</span>
-        <h2 class="font-semibold text-3xl">
-          Project Request
-        </h2>
-        <div class="space-y-3 mt-5">
+
+    <div class="space-y-2">
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" checked="checked" />
+        <div class="collapse-title font-medium">
+          How do we get started?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          We start with a short call to align on goals and scope. 
+          If you prefer, you can also send a detailed brief by email. 
+          I'll review it and reply with a clear proposal, pricing, and timeline.        
+        </div>
+      </div>
+      
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          How long does a project take?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Landing pages usually take 1 to 2 weeks. Multi-page sites take 2 to 4 weeks. 
+          Larger products depend on scope and feedback speed.
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          How do payments work?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Payments are handled via <span class="font-semibold">PayPal</span>. 
+          Projects begin with a 50% upfront payment, 
+          with the remaining 50% due before final delivery.
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-semibold">
+          What is your process?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed space-y-2">
           <p>
-            First, you send a quick project request. This helps me understand what 
-            you need and see if we're a good fit. 
+            We begin with an initial brief to define goals, scope, and expectations.
           </p>
           <p>
-            If it makes sense to move forward, we can hop on a video call or continue 
-            the conversation through email or WhatsApp, whatever works best for you.          
+            Next, I create a moodboard to establish visual direction and overall aesthetic.
+          </p>
+          <p>
+            Then I move into wireframes to define structure and user flow before visual design begins.
+          </p>
+          <p>
+            After approval, I design the full UI with refined visuals and interactions.
+          </p>
+          <p>
+            If required, I handle development in Framer, Webflow, or Astro.
+          </p>
+          <p>
+            You will receive regular updates throughout the entire process.
           </p>
         </div>
       </div>
 
-      <div>
-        <span class="text-sm">Step 02.</span>
-        <h2 class="font-semibold text-3xl">
-          First Meeting
-        </h2>
-        <div class="space-y-3 mt-5">
-          <p>
-            (Optional) If you prefer a quick face-to-face before we begin, 
-            we can set up a short video call to go over your project, 
-            goals, and expectations. It's a good way to make sure we're 
-            on the same page and clarify anything upfront.          
-          </p>
-          <p>
-            Not into calls? That's totally fine, we can keep it all async via email or chat.          
-          </p>
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          What's your revision policy?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Revisions are included during the wireframe phase to lock structure. 
+          After final design, 1 to 2 major revision rounds are included. 
+          Additional revisions are billed at my hourly rate.
         </div>
       </div>
 
-      <div>
-        <span class="text-sm">Step 03.</span>
-        <h2 class="font-semibold text-3xl">
-          Proposal
-        </h2>
-        <div class="space-y-3 mt-5">
-          <p>
-            Once I understand your project, I'll put together <b>a clear, 
-            upfront proposal</b>, no hourly rates, just a flat project price 
-            so you know exactly what to expect. No surprises, <b>just transparency.</b>          
-          </p>
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          Do you build in Framer?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Yes. I build in Framer. 
+          I also work with <span class="font-semibold">Webflow</span> and 
+          <span class="font-semibold">Astro</span> when needed.
         </div>
       </div>
 
-      <div>
-        <span class="text-sm">Step 04.</span>
-        <h2 class="font-semibold text-3xl">
-          Project Request
-        </h2>
-        <div class="space-y-3 mt-5">
-          <p>
-            With everything in place, the real work begins. 
-            I'll start building your project while keeping you updated along the way.          
-          </p>
-          <p>
-            Expect clear communication and regular progress reports through Slack, 
-            email, or whatever works best for you. No guesswork, just steady progress.          
-          </p>
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          Can you handle quick design updates?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Yes. Smaller tasks don't require a full project scope. 
+          Send details and I'll quote accordingly.
         </div>
       </div>
 
-      <div>
-        <span class="text-sm">Step 05.</span>
-        <h2 class="font-semibold text-3xl">
-          Launch
-        </h2>
-        <div class="space-y-3 mt-5">
-          <p>
-            With everything in place, the real work begins. 
-            I'll start building your project while keeping you updated along the way.          
-          </p>
-          <p>
-            Expect clear communication and regular progress reports through Slack, 
-            email, or whatever works best for you. No guesswork, just steady progress.          
-          </p>
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          Do you work with agencies?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Yes. I collaborate with agencies and internal teams when needed.
         </div>
       </div>
 
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          Can we communicate via WhatsApp?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Yes. WhatsApp is available for project communication after kickoff.
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+        <input type="radio" name="faq-accordion" />
+        <div class="collapse-title font-medium">
+          What is your refund policy?
+        </div>
+        <div class="collapse-content text-sm leading-relaxed">
+          Payments are non refundable once the project has started. The initial deposit is non refundable, as time and production capacity are reserved specifically for each project.
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
