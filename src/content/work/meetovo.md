@@ -10,7 +10,7 @@ tags: ["Figma", "Prototype", "Product Design", "UI Design"]
 published: true
 featured: false
 more: true
-order: 270
+order: 240
 ---
 
 <h2 class="mb-4 font-medium">About</h2>
