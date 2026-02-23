@@ -1,7 +1,7 @@
 ---
 title: "Aeroservicios USA"
 date: 2026-02-18
-img: "cover.webp"
+img: "1.webp"
 galleryImg1: "1.webp"
 description: "Aero"
 tags: ["Webflow"]

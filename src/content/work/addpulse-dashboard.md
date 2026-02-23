@@ -4,7 +4,7 @@ date: 2025-11-17
 img: "cover.webp"
 description: "Marketing dashboard. Personal project."
 tags: ["Figma"]
-published: false
+published: true
 featured: false
 order: 50
 ---

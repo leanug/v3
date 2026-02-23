@@ -9,10 +9,10 @@ gallerySideImg2: "gallery-side-img-2.webp"
 description: "Share document"
 tags: ["Webflow"]
 outbound: "https://www.simjaticlub.com/"
-published: false
+published: true
 featured: true
 more: true
-order: 10
+order: 215
 ---
 
 <p class="mb-8">
@@ -26,12 +26,13 @@ order: 10
 </p>
 
 <ul>
-  <li class="py-2"><span class="text-gray-400">CLIENT:</span> <a href="https://mutaxmk.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">mutaxmk.com</a></li>
-  <li class="py-2"><span class="text-gray-400">COUNTRY:</span> 🇵🇦 Panama</li>
-  <li class="py-2"><span class="text-gray-400">WEB BUILDER:</span> Webflow</li>
-  <li class="py-2"><span class="text-gray-400">PAGES:</span> 10</li>
-  <li class="py-2"><span class="text-gray-400">DESIGN:</span> Provided by client</li>
-  <li class="py-2"><span class="text-gray-400">ROLE:</span> Webflow Developer</li>
+  <li class="py-2"><span class="text-base-content/70 uppercase">Live website:</span> <a href="https://simjaticlub.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">simjaticlub.com</a></li>
+  <li class="py-2"><span class="text-base-content/70">CLIENT:</span> <a href="https://mutaxmk.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">mutaxmk.com</a></li>
+  <li class="py-2"><span class="text-base-content/70">COUNTRY:</span> 🇵🇦 Panama</li>
+  <li class="py-2"><span class="text-base-content/70">WEB BUILDER:</span> Webflow</li>
+  <li class="py-2"><span class="text-base-content/70">PAGES:</span> 10</li>
+  <li class="py-2"><span class="text-base-content/70">DESIGN:</span> Provided by client</li>
+  <li class="py-2"><span class="text-base-content/70">ROLE:</span> Webflow Developer</li>
 </ul>
 
 
