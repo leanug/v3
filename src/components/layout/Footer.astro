@@ -3,55 +3,48 @@ import YouTube from "../icons/YouTube.astro"
 import LinkedIn from "../icons/LinkedIn.astro"
 import Instagram from "../icons/Instagram.astro"
 import Dribbble from "../icons/Dribbble.astro"
+
+// Build-time timestamp
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric'
+});
 ---
 
-<footer class="footer sm:footer-horizontal items-center md:justify-between py-5 mt-12 xl:mt-20" transition:persist>
-  <aside class="grid-flow-col items-center w-full">
-    <p>© 2026 Leandro · Built with Astro.js and daisyUI</p>
-  </aside>
-  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-end">
-    <a href="https://x.com/leandroubilla_" title="Twitter" target="_blank" rel="noopener noreferrer" class="button flex items-center py-1">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        class="fill-current">
-        <path
-          d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+<footer class="flex flex-col items-center py-8 mt-12 xl:mt-20 border-t border-base-200" transition:persist>
+  
+  <nav class="flex items-center justify-center gap-6 mb-8">
+    <a href="https://x.com/leandroubilla_" title="Twitter" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all hover:-translate-y-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" class="fill-current">
+        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
       </svg>
     </a>
-    <a 
-      href="https://youtube.com/@scriptingpixels" 
-      title="YouTube" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="button flex items-center space-x-2 py-1">
-      <YouTube size={24} />
+    <a href="https://youtube.com/@scriptingpixels" title="YouTube" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all hover:-translate-y-1">
+      <YouTube size={22} />
     </a>
-    <a 
-      href="https://linkedin.com/in/leandro-ubilla-gonzalez" 
-      title="LinkedIn" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="button flex items-center space-x-2 py-1">
-      <LinkedIn />
+    <a href="https://linkedin.com/in/leandro-ubilla-gonzalez" title="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all hover:-translate-y-1">
+      <LinkedIn size={22} />
     </a>
-    <a 
-      href="https://instagram.com/ui.leandro" 
-      title="Instagram" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="button flex items-center space-x-2 py-1">
-      <Instagram size={24} />
+    <a href="https://instagram.com/ui.leandro" title="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all hover:-translate-y-1">
+      <Instagram size={22} />
     </a>
-    <a 
-      href="https://dribbble.com/leanug" 
-      title="Dribbble" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="button flex items-center space-x-2 py-1">
-      <Dribbble />
+    <a href="https://dribbble.com/leanug" title="Dribbble" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-all hover:-translate-y-1">
+      <Dribbble size={22} />
     </a>
   </nav>
+
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-4 gap-4 opacity-60 text-[11px] uppercase tracking-widest font-mono">
+    
+    <aside>
+      <p>© 2026 Leandro · Built with Astro & daisyUI</p>
+    </aside>
+
+    <div class="flex items-center gap-2">
+      <div class="w-1.5 h-1.5 rounded-full bg-success shadow-[0_0_8px_rgba(54,211,153,0.5)]"></div>
+      <span>System Online · Last Build: {lastUpdated}</span>
+    </div>
+
+  </div>
+
 </footer>
