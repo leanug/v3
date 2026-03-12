@@ -1,34 +1,114 @@
 ---
 title: "Aeroservicios USA"
 date: 2026-02-18
-img: "1.webp"
-galleryImg1: "1.webp"
+img: "cover.webp"
 description: "Aero"
+video: "aero-before.webm"
 tags: ["Webflow"]
 outbound: "https://www.aeroservicios.com/"
-published: false
+published: true
 featured: false
 more: true
-order: 250
+order: 300
 ---
 
-<p class="mb-8">
-  <strong>Simjati Club</strong> is a <em>10-page website</em> built in <strong>Webflow</strong> for a private social club focused on <em>community</em>, <em>wellness</em>, and <em>shared experiences</em>.
+<h2 class="mb-4 font-medium md:max-w-2xl mx-auto">About</h2>
+
+<p class="mb-4 md:max-w-2xl mx-auto">
+  <strong>Aeroservicios</strong> is a Miami-based Ground Support Equipment provider. Following an acquisition by <strong>CSI Leasing</strong>, the company needed a website that matched its new direction.
 </p>
 
-<p class="mb-8">
-  While the design was <strong>provided by the client</strong>, I handled the full implementation — crafting a <em>smooth</em>, <em>friendly</em>, and <em>easy-to-navigate</em> site in Webflow.
-  <br />
-  I also integrated <code>Swiper.js</code> to power the carousels, adding subtle interactivity while keeping the overall experience <strong>lightweight</strong> and <strong>accessible</strong>.
+<p class="mb-4 md:max-w-2xl mx-auto">
+  The project came through <strong>The Kestrel Co.</strong>, the studio that handled development.
 </p>
 
-<ul>
-  <li class="py-2"><span class="text-gray-400">CLIENT:</span> <a href="https://mutaxmk.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600">mutaxmk.com</a></li>
-  <li class="py-2"><span class="text-gray-400">COUNTRY:</span> 🇵🇦 Panama</li>
-  <li class="py-2"><span class="text-gray-400">WEB BUILDER:</span> Webflow</li>
-  <li class="py-2"><span class="text-gray-400">PAGES:</span> 10</li>
-  <li class="py-2"><span class="text-gray-400">DESIGN:</span> Provided by client</li>
-  <li class="py-2"><span class="text-gray-400">ROLE:</span> Webflow Developer</li>
+<h2 class="mb-4 font-medium mt-12 md:max-w-2xl mx-auto">Task</h2>
+
+<p class="mb-4 md:max-w-2xl mx-auto">
+  My role focused on <strong>UI design</strong> and building the interface system from scratch. 
+  This included designing the <em>homepage</em>, <em>contact page</em>, <em>services</em>, <em>single service pages</em>, <em>about page</em>, and the <strong>inventory page</strong>.
+</p>
+
+<p class="mb-4 md:max-w-2xl mx-auto">
+  A key part of the work was designing the <strong>inventory experience</strong> and a <strong>request-a-quote form</strong> with cart-like behavior, allowing users to browse equipment and submit requests in an intuitive and easy-to-use workflow. 
+  The system was designed to be implemented using <strong>WordPress</strong> and <strong>WooCommerce</strong>.
+</p>
+
+<h2 class="mb-4 font-medium mt-12 md:max-w-2xl mx-auto">Process</h2>
+
+<p class="mb-4 md:max-w-2xl mx-auto">
+  The design started from a homepage wireframe provided by <strong>CSI Leasing</strong>'s marketing team, which I used as a structural foundation while building out the visual language, adapting the brand guidelines and pattern system into something that actually felt considered.
+</p>
+
+<ul class="mb-12 md:max-w-2xl mx-auto">
+  <li class="py-2"><span class="text-base-content/70">
+    CLIENT:</span>
+    <a 
+      href="https://thekestrel.co/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="underline hover:text-gray-600"
+    >
+      The Kestrel Co.
+    </a> 
+  </li>
+  <li class="py-2"><span class="text-base-content/70">
+    INDUSTRY:</span> Aviation / Ground Support Equipment
+  </li>
+  <li class="py-2"><span class="text-base-content/70">
+    LOCATION:</span> 🇺🇸 Miami, United States
+  </li>
+  <li class="py-2"><span class="text-base-content/70">
+    STACK:</span> WordPress + WooCommerce
+  </li>
+  <li class="py-2"><span class="text-base-content/70">
+    ROLE:</span> UI Designer
+  </li>
 </ul>
 
+<Video
+  class="mb-4 md:max-w-2xl mx-auto rounded-xl"
+  src="/media/work/aeroservicios/aero-before.webm"
+  autoplay
+  loop
+  muted
+  playsinline
+  controls
+  muted
+/>
+<p class="text-sm md:max-w-2xl text-base-content/70 mb-4 mx-auto text-balance">
+  The original Aeroservicios website before the redesign. The interface was dated and the inventory browsing experience was difficult to navigate.
+</p>
+
+<img 
+  src="/media/work/aeroservicios/inventory_grid.webp" 
+  alt="Aeroservicios homepage" 
+  class="w-full rounded-xl mb-4 mt-12"
+  alt="Aeroservicios inventory grid showing available GSE equipment and their details"
+  role="img"
+/>
+
+<img 
+  src="/media/work/aeroservicios/request_a_quote_equipment_list.webp" 
+  alt="Aeroservicios homepage" 
+  class="w-full rounded-xl mb-4 mt-12"
+  alt="Aeroservicios request a quote equipment list"
+  role="img"
+/>
+
+<img 
+  src="/media/work/aeroservicios/inventory_table.webp" 
+  alt="Aeroservicios inventory table screen" 
+  class="w-full rounded-xl mb-4 mt-12"
+  alt="Aeroservicios inventory table screen"
+  role="img"
+/>
+
+<img 
+  src="/media/work/aeroservicios/home.webp" 
+  alt="Aeroservicios homepage" 
+  class="w-full rounded-xl mb-4 mt-12"
+  alt="Aeroservicios home page"
+  role="img"
+/>
 

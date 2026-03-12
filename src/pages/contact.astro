@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Frequently Asked Questions";
+const description = "Everything you need to know before starting a project.";
+---
+
+<Layout {title} {description}>
+  <section class="max-w-xl mx-auto py-16 px-6">
+    <div class="mb-10 text-center">
+      <h1 class="text-3xl font-medium">Get in touch</h1>
+      <p class="text-base-content/70 mt-2">
+        Tell me what you're building and I'll get back to you within 24 hours.
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/xlgpbpzv"
+      method="POST"
+      class="flex flex-col gap-5"
+      novalidate
+    >
+      <fieldset class="fieldset bg-base-300 border-base-300 rounded-box w-full border p-6">
+        <legend class="fieldset-legend">Start a Project</legend>
+
+        <!-- Name -->
+        <label class="label">Name</label>
+        <input
+          type="text"
+          name="name"
+          class="input w-full"
+          placeholder="Your name"
+          required
+        />
+
+        <!-- Email -->
+        <label class="label">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="input w-full"
+          placeholder="your@email.com"
+          required
+        />
+
+        <!-- Services -->
+        <label class="label mt-2">
+          What do you need? <span class="text-error">*</span>
+        </label>
+
+        <div class="flex flex-col gap-2">
+
+          <label class="label cursor-pointer justify-start gap-3">
+            <input
+              type="checkbox"
+              name="services"
+              value="UI Design"
+              class="checkbox checkbox-primary"
+            />
+            <span class="font-medium">UI Design</span>
+          </label>
+
+          <label class="label cursor-pointer justify-start gap-3">
+            <input
+              type="checkbox"
+              name="services"
+              value="Web Development"
+              class="checkbox checkbox-primary"
+            />
+            <span class="font-medium">Web Development</span>
+          </label>
+
+          <label class="label cursor-pointer justify-start gap-3">
+            <input
+              type="checkbox"
+              name="services"
+              value="Product Design"
+              class="checkbox checkbox-primary"
+            />
+            <span class="font-medium">Product Design</span>
+          </label>
+
+          <label class="label cursor-pointer justify-start gap-3">
+            <input
+              type="checkbox"
+              name="services"
+              value="Other"
+              class="checkbox checkbox-primary"
+            />
+            <span class="font-medium">Other</span>
+          </label>
+
+        </div>
+
+        <!-- Message -->
+        <label class="label mt-2">Message</label>
+        <textarea
+          name="message"
+          class="textarea w-full"
+          placeholder="Tell me a bit about your project..."
+          rows="4"
+        ></textarea>
+
+        <!-- Submit -->
+        <button id="submit-btn" class="btn btn-neutral mt-4">
+          Send message
+        </button>
+      </fieldset>
+    </form>
+
+    <!-- Success state -->
+    <div id="success-msg" class="alert alert-success mt-6 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <div>
+        <p class="font-semibold">Message sent!</p>
+        <p class="text-sm">I'll be in touch within 24 hours.</p>
+      </div>
+    </div>
+
+    <!-- Error state -->
+    <div id="error-msg" class="alert alert-error mt-6 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <p>Something went wrong. Please try again or email me directly.</p>
+    </div>
+  </section>
+
+  <style>
+    .hidden { display: none !important; }
+  </style>
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+  const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg');
+
+  if (form && submitBtn) {
+    let isSubmitting = false;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (isSubmitting) return;
+      isSubmitting = true;
+
+      // Validate: at least one service checked
+      const checked = form.querySelectorAll('input[name="services"]:checked');
+      if (checked.length === 0) {
+        const hint = document.getElementById('services-hint');
+        hint?.classList.remove('hidden');
+        setTimeout(() => hint?.classList.add('hidden'), 3000);
+        isSubmitting = false;
+        return;
+      }
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      errorMsg?.classList.add('hidden');
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (res.ok) {
+          form.classList.add('hidden');
+          successMsg?.classList.remove('hidden');
+        } else {
+          throw new Error();
+        }
+      } catch {
+        errorMsg?.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+        isSubmitting = false;
+      }
+    });
+  }
+</script>
