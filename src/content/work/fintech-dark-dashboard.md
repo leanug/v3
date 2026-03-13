@@ -7,7 +7,7 @@ tags: [Figma"]
 published: true
 featured: true
 more: false
-order: 300
+order: 240
 ---
 
 Fintech dark mode dashboard

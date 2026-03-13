@@ -7,7 +7,7 @@ tags: ["Figma"]
 published: true
 featured: true
 more: false
-order: 270
+order: 300
 ---
 
 Hero I did for my portfolio, personal project

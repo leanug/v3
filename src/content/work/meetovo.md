@@ -5,9 +5,9 @@ img: "cover.png"
 description: "Meetovo product design"
 tags: ["Figma", "Prototype", "Product Design", "UI Design"]
 published: true
-featured: false
+featured: true
 more: true
-order: 240
+order: 260
 ---
 
 <h2 class="mb-4 font-medium md:max-w-2xl mx-auto">About</h2>
