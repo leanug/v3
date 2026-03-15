@@ -5,7 +5,7 @@ img: "cover.webp"
 description: "Fintech dark mode dashboard"
 tags: [Figma"]
 published: true
-featured: true
+featured: false
 more: false
 order: 240
 ---

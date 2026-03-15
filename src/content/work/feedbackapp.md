@@ -5,7 +5,7 @@ img: "cover.webp"
 description: "Dashboard screens for a feedback app, designed in Figma."
 tags: ["Figma"]
 published: true
-featured: true
+featured: false
 more: false
 order: 215
 ---

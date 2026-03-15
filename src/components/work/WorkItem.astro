@@ -2,62 +2,73 @@
 import CardActions from '../ui/Card/CardActions.astro';
 import { Image } from 'astro:assets';
 
-const { slug, img, title, outbound, more, video } = Astro.props;
+const { slug, img, title, description, tags = [], outbound, more, showMeta, category } = Astro.props;
 const imagePath = `/media/work/${slug}/${img}`;
 ---
 
-<article class="relative group">
-  <div class="relative overflow-hidden rounded-2xl aspect-4/3">
-    {/* Use a fragment to avoid repeating logic */}
+<article class="group flex flex-col gap-4">
+
+ {/* Project meta */}
+ {showMeta && (
+   <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-4">
+
+    <span class="text-md font-medium leading-tight w-full md:w-1/4">
+      {title}
+    </span>
+
+    <span class="text-md leading-tight text-base-content/70 w-full md:w-1/4 text-balance">
+      {category ? `${category} ` : ''}
+    </span>
+
+    <p class="text-sm text-base-content/70 w-full md:w-1/4 whitespace-pre-line">
+      {description}
+    </p>
+  
+    <div class="flex flex-wrap justify-start md:justify-end items-end gap-1.5 w-full md:w-1/4">
+      {tags.map((tag: string) => (
+        <span class="badge badge-soft badge-primary">
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+ )}
+
+  {/* Image */}
+  <div class="relative overflow-hidden aspect-4/3 rounded-xl">
+
     {more ? (
       <a href={`/work/${slug}`} class="block w-full h-full">
         <Image
           transition:name={`image-${slug}`}
           src={imagePath}
-          alt={`Cover of ${title}`} 
-  
-          /* 1. Responsive widths: Mobile, Tablet, and the 1280px (7xl) cap */
+          alt={`Cover of ${title}`}
           widths={[400, 800, 1280]}
-          
-          /* 2. Logic: Full width on mobile, 1280px max on desktop */
           sizes="(max-width: 1280px) 100vw, 1280px"
-          
-          /* 3. Layout preservation */
-          width={1600} 
+          width={1600}
           height={1200}
-          
-          /* 4. Performance & Styling */
-          decoding="async" 
+          decoding="async"
           loading="lazy"
-          class="w-full h-full object-cover rounded-lg aspect-4/3 bg-neutral-100"
+          class="w-full h-full object-cover bg-neutral-100"
         />
       </a>
     ) : (
-      <div class="w-full h-full">
-        <Image
-          transition:name={`image-${slug}`}
-          src={imagePath}
-          alt={`Cover of ${title}`} 
-          
-          
-          widths={[400, 800, 1280]}
-          
-          
-          sizes="(max-width: 1280px) 100vw, 1280px"
-          
-        
-          width={1600} 
-          height={1200}
-          
-        
-          decoding="async" 
-          loading="lazy"
-          class="w-full h-full object-cover rounded-lg aspect-4/3 bg-neutral-100"
-        />
-      </div>
+      <Image
+        transition:name={`image-${slug}`}
+        src={imagePath}
+        alt={`Cover of ${title}`}
+        widths={[400, 800, 1280]}
+        sizes="(max-width: 1280px) 100vw, 1280px"
+        width={1600}
+        height={1200}
+        decoding="async"
+        loading="lazy"
+        class="w-full h-full object-cover bg-neutral-100"
+      />
     )}
 
-    {/* Hover Actions */}
     <CardActions {outbound} {more} {slug} />
+
   </div>
+
 </article>

@@ -5,7 +5,7 @@ img: "cover.webp"
 description: "Pricing Tables"
 tags: ["Figma"]
 published: true
-featured: true
+featured: false
 order: 10
 ---
 

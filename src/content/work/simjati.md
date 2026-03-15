@@ -1,16 +1,14 @@
 ---
 title: "Simjati Club"
 date: 2025-01-02
-img: "cover.webp"
-galleryImg1: "gallery-img-1.webp"
-galleryImg2: "gallery-img-2.webp"
-galleryImg3: "gallery-img-3.webp"
-galleryImg4: "gallery-img-4.webp"
-description: "Share document"
-tags: ["Webflow"]
+img: "ctest.png"
+description: |
+  Webflow development for a private community club website.
+tags: ["Webflow", "Client Work", "Web Development"]
 outbound: "https://www.simjaticlub.com/"
+category: Community club website
 published: false
-featured: true
+featured: false
 more: true
 order: 220
 ---
@@ -20,7 +18,7 @@ order: 220
 </p>
 
 <p class="mb-8">
-  While the design was <strong>provided by the client</strong>, I handled the full implementation — crafting a <em>smooth</em>, <em>friendly</em>, and <em>easy-to-navigate</em> site in Webflow.
+  While the design was <strong>provided by the client</strong>, I handled the full implementation - crafting a <em>smooth</em>, <em>friendly</em>, and <em>easy-to-navigate</em> site in Webflow.
   <br />
   I also integrated <code>Swiper.js</code> to power the carousels, adding subtle interactivity while keeping the overall experience <strong>lightweight</strong> and <strong>accessible</strong>.
 </p>

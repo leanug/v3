@@ -5,7 +5,7 @@ img: "cover_v2.png"
 description: "Rakuen Dashboard"
 tags: ["Figma"]
 published: false
-featured: true
+featured: false
 more: false
 order: 295
 ---

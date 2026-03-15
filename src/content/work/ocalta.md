@@ -10,7 +10,7 @@ description: "Construction company website design"
 tags: ["Figma", "UI Design"]
 outbound: "https://www.ocalta.com"
 published: false
-featured: true
+featured: false
 more: true
 order: 170
 ---

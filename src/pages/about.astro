@@ -3,17 +3,25 @@ import Layout from '../layouts/Layout.astro';
 
 const title = "About me";
 const description = "Learn more about the developer behind the keyboard.";
+
+const stack = [
+  { name: "Astro",      icon: "https://cdn.simpleicons.org/astro" },
+  { name: "React",      icon: "https://cdn.simpleicons.org/react" },
+  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
+  { name: "Tailwind",   icon: "https://cdn.simpleicons.org/tailwindcss" },
+  { name: "Figma",      icon: "https://cdn.simpleicons.org/figma" },
+  { name: "Webflow",    icon: "https://cdn.simpleicons.org/webflow" },
+  { name: "Framer",     icon: "https://cdn.simpleicons.org/framer" },
+];
 ---
 
 <Layout {title} {description}>
   <section class="mt-8 md:mt-12">
     <div class="max-w-2xl">
 
-      <span class="font-medium text-sm uppercase">
-        About
-      </span>
-      
-      <h1 class="heading-hero mt-2.5 mb-10 text-3xl md:text-4xl font-medium text-balance"> 
+      <span class="font-medium text-sm uppercase">About</span>
+
+      <h1 class="heading-hero mt-2.5 mb-10 text-3xl md:text-4xl font-medium text-balance">
         What Led Me Here
       </h1>
 
@@ -30,13 +38,41 @@ const description = "Learn more about the developer behind the keyboard.";
       </p>
 
       <p class="text-base leading-relaxed mb-6 text-base-content/70">
-        Along the way, I built several web applications. Many never launched or gained traction. I also spent eight months building a game that I never released. Still, those projects taught me how to ship, test, and iterate.     
+        Along the way, I built several web applications. Many never launched or gained traction. I also spent eight months building a game that I never released. Still, those projects taught me how to ship, test, and iterate.
       </p>
 
       <p class="text-base leading-relaxed mb-6 text-base-content/70">
         Over time, I expanded into React, Framer, Webflow, and UI design, steadily building a strong foundation in both development and product design.
       </p>
 
+      <!-- Stack section -->
+      <div class="mt-14">
+        <span class="font-medium text-sm uppercase">My Stack</span>
+
+        <div class="relative mt-6">
+          <!-- Faded border container -->
+          <div class="absolute inset-0 rounded-xl"
+            style="background: radial-gradient(ellipse at center, transparent 40%, oklch(var(--b1)) 100%); pointer-events: none; z-index: 1;">
+          </div>
+          <div class="border border-base-content/10 rounded-xl p-4">
+            <div class="flex flex-wrap gap-2">
+              {stack.map(({ name, icon }) => (
+                <div class="tooltip flex-1" data-tip={name} style="min-width: 48px;">
+                  <div class="aspect-square flex items-center justify-center border border-base-content/10 rounded-lg bg-base-100 hover:border-base-content/30 transition-colors duration-200 w-full">
+                    <img
+                      src={icon}
+                      alt={name}
+                      class="w-8 h-8 object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

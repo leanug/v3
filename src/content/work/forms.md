@@ -5,7 +5,7 @@ img: "cover.webp"
 description: "Forms"
 tags: ["Figma"]
 published: true
-featured: true
+featured: false
 more: false
 order: 210
 ---

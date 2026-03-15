@@ -2,12 +2,14 @@
 title: "Aeroservicios USA"
 date: 2026-02-18
 img: "cover.webp"
-description: "Aero"
+description: |
+  Website redesign for a Miami-based ground support equipment provider.
 video: "aero-before.webm"
-tags: ["Webflow"]
+tags: ["UI Design", "Client Work"]
 outbound: "https://www.aeroservicios.com/"
+category: Aviation equipment catalog
 published: true
-featured: false
+featured: true
 more: true
 order: 350
 ---

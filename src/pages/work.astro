@@ -7,7 +7,7 @@ import Plain2 from "../components/icons/Plain2.astro";
 import Contra from "../components/icons/Contra.astro";
 
 const work: CollectionEntry<'work'>[] = (await getCollection('work'))
-  .filter((entry) => entry.data.featured === true)
+  .filter((entry) => entry.data.published === true)
   .sort((a, b) => {
     const orderA = a.data.order ?? -Infinity;
     const orderB = b.data.order ?? -Infinity;
@@ -30,30 +30,11 @@ const description = "Thoughtful Web development that helps businesses and creato
   <section class="my-8 md:mb-12 lg:mb-28 md:mt-16">
 
     <div class="max-w-4xl text-center mx-auto">
-      <!-- Availability badge -->
-      <div class="bg-base-100 inline-flex items-center gap-2.5 px-3 py-1.5 mb-4 rounded-full text-md text-white">
-        <span class="flex items-center gap-2 rounded-full">
-          <span class="hidden relative sm:flex size-2.5">
-            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
-          </span>
-        </span>
-        <span class="text-base-content text-sm">
-          Available for Design & Development
-          <!-- Available for Product Design & Dev — From Late March -->
-        </span>
-      </div>
-
       <!-- H1 -->
       <h1 class="font-semibold leading-[1.2] md:leading-[1.1] text-balance
                 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-        Building thoughtful <br /> interfaces
+        All Work
       </h1>
-
-      <!-- Description -->
-      <p class="mt-4 md:text-md lg:text-lg text-base-content/70 max-w-2xl mx-auto text-balance">
-        I help companies and makers turn ideas into intuitive digital products.
-      </p>
 
       <!-- CTA -->
       <div class="mt-8 flex gap-2.5 justify-center flex-wrap">
@@ -87,7 +68,7 @@ const description = "Thoughtful Web development that helps businesses and creato
   </section>
 
   <section aria-label="Work Collection">
-    <div class="space-y-8">
+    <div class="space-y-3">
       {work.map((entry) => (
         <WorkItem
           img={entry.data.img}
@@ -95,22 +76,11 @@ const description = "Thoughtful Web development that helps businesses and creato
           tags={entry.data?.tags}
           description={entry.data?.description}
           outbound={entry.data?.outbound}
-          category={entry.data?.category}
           slug={entry.slug}
           more={entry.data?.more || false}
-          showMeta={true}
+          showMeta={false}
         />
       ))}
-    </div>    
+    </div>
   </section>
-
-  <div class="flex justify-center mt-12">
-    <a 
-      href="/work" 
-      class="btn btn-soft btn-secondary rounded-full"
-      aria-label="View all work projects"
-    >
-      All work
-    </a>
-  </div>
 </Layout>
