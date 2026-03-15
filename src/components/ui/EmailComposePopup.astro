@@ -1,0 +1,71 @@
+---
+// EmailComposePopup.astro
+// Usage: wrap your email button with this component
+// <EmailComposePopup email="you@example.com" subject="Project inquiry">
+//   <!-- your button here -->
+// </EmailComposePopup>
+
+const {
+  email = "leandroubilla+contact@protonmail.com",
+  subject = "Project inquiry",
+} = Astro.props;
+
+const truncatedEmail = email.length > 20 ? email.slice(0, 20) + "..." : email;
+---
+
+<div class="relative inline-block group/email">
+
+  <!-- Slot for the trigger button -->
+  <slot />
+
+  <!-- Email compose popup -->
+  <div class="
+    absolute left-full top-1/2 -translate-y-1/2 ml-3 w-52
+    opacity-0 translate-x-2 pointer-events-none
+    group-hover/email:opacity-100 group-hover/email:translate-x-0
+    transition-all duration-300 ease-out
+    bg-base-100 rounded-xl p-3
+    shadow-md shadow-base-content/5
+    border border-base-content/8
+    z-50
+  ">
+
+    <!-- To field -->
+    <div class="flex items-center gap-2 mb-2 pb-2 border-b border-base-content/8">
+      <span class="text-[10px] text-base-content/30 uppercase font-medium w-4">To</span>
+      <span class="text-[11px] text-base-content/50 truncate">{truncatedEmail}</span>
+    </div>
+
+    <!-- Subject -->
+    <div class="flex items-center gap-2 mb-2 pb-2 border-b border-base-content/8">
+      <span class="text-[10px] text-base-content/30 uppercase font-medium w-4">Re</span>
+      <span class="text-[11px] text-base-content/50 overflow-hidden whitespace-nowrap
+        max-w-0 group-hover/email:max-w-full
+        transition-all duration-500 delay-150 ease-out
+      ">{subject}</span>
+    </div>
+
+    <!-- Body lines -->
+    <div class="space-y-1.5 pt-1">
+      {[
+        "w-full delay-200",
+        "w-4/5 delay-300",
+        "w-3/5 delay-[400ms]",
+        "w-2/5 delay-500",
+      ].map((classes) => (
+        <div class={`h-1.5 bg-base-content/8 rounded-full opacity-0 group-hover/email:opacity-100 transition-opacity duration-300 ${classes}`} />
+      ))}
+    </div>
+
+    <!-- Send button -->
+    <div class="mt-3 flex justify-end
+      opacity-0 translate-y-1
+      group-hover/email:opacity-100 group-hover/email:translate-y-0
+      transition-all duration-300 delay-500">
+      <div class="bg-base-content/10 rounded-full px-3 py-1 text-[10px] text-base-content/40 font-medium">
+        Send ↑
+      </div>
+    </div>
+
+  </div>
+</div>
