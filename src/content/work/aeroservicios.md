@@ -83,24 +83,28 @@ order: 350
 </p>
 
 <img 
-  src="/media/work/aeroservicios/inventory_grid.webp" 
-  alt="Aeroservicios homepage" 
+  src="/media/work/aeroservicios/request_a_quote_empty_list.webp" 
   class="w-full rounded-xl mb-4 mt-12"
-  alt="Aeroservicios inventory grid showing available GSE equipment and their details"
+  alt="Aeroservicios request a quote empty list"
   role="img"
 />
 
 <img 
   src="/media/work/aeroservicios/request_a_quote_equipment_list.webp" 
-  alt="Aeroservicios homepage" 
   class="w-full rounded-xl mb-4 mt-12"
   alt="Aeroservicios request a quote equipment list"
   role="img"
 />
 
 <img 
+  src="/media/work/aeroservicios/inventory_grid.webp" 
+  class="w-full rounded-xl mb-4 mt-12"
+  alt="Aeroservicios inventory grid showing available GSE equipment and their details"
+  role="img"
+/>
+
+<img 
   src="/media/work/aeroservicios/inventory_table.webp" 
-  alt="Aeroservicios inventory table screen" 
   class="w-full rounded-xl mb-4 mt-12"
   alt="Aeroservicios inventory table screen"
   role="img"
@@ -108,9 +112,15 @@ order: 350
 
 <img 
   src="/media/work/aeroservicios/home.webp" 
-  alt="Aeroservicios homepage" 
   class="w-full rounded-xl mb-4 mt-12"
   alt="Aeroservicios home page"
+  role="img"
+/>
+
+<img 
+  src="/media/work/aeroservicios/services.webp" 
+  class="w-full rounded-xl mb-4 mt-12"
+  alt="Services page"
   role="img"
 />
 
