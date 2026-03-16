@@ -1,7 +1,7 @@
 ---
 title: "Meetovo"
 date: 2024-04-04
-img: "cover.png"
+img: "cover.webp"
 description: |
   Product design for a recruitment SaaS platform helping companies attract and manage candidates and expanded the dashboard with new screens, menus, and hiring workflows.
 tags: ["Client Work", "Prototype", "UI Design"]
