@@ -55,15 +55,6 @@ order: 350
     </a> 
   </li>
   <li class="py-2"><span class="text-base-content/70">
-    INDUSTRY:</span> Aviation / Ground Support Equipment
-  </li>
-  <li class="py-2"><span class="text-base-content/70">
-    LOCATION:</span> 🇺🇸 Miami, United States
-  </li>
-  <li class="py-2"><span class="text-base-content/70">
-    STACK:</span> WordPress + WooCommerce
-  </li>
-  <li class="py-2"><span class="text-base-content/70">
     ROLE:</span> UI Designer
   </li>
 </ul>
