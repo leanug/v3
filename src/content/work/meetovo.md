@@ -56,14 +56,6 @@ The focus was on maintaining a simple, intuitive, and distraction-free interface
   </li>
 
   <li class="py-2">
-    <span class="text-base-content/70">INDUSTRY:</span> HR Tech / Recruitment
-  </li>
-
-  <li class="py-2">
-    <span class="text-base-content/70">COUNTRY:</span> 🇩🇪 Germany
-  </li>
-
-  <li class="py-2">
     <span class="text-base-content/70">ROLE:</span> Product Designer
   </li>
 

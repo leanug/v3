@@ -4,7 +4,7 @@ date: 2026-02-26
 img: "cover.webp"
 description: "Fintech dark mode dashboard"
 tags: [Figma"]
-published: true
+published: false
 featured: false
 more: false
 order: 240
