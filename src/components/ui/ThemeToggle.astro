@@ -1,0 +1,53 @@
+---
+// ThemeToggle.astro
+---
+
+<div class="dropdown dropdown-end">
+  <button tabindex="0" class="btn btn-ghost btn-sm gap-1 rounded-lg">
+    <span class="text-xs">Theme: <span id="theme-label"></span></span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <ul tabindex="0" class="dropdown-content menu menu-md bg-base-100 border border-base-300 rounded-box z-50 mt-1 w-36 p-1 shadow">
+    <li><button onclick="setTheme('light')">Light</button></li>
+    <li><button onclick="setTheme('dark')">Dark</button></li>
+    <li><button onclick="setTheme('system')">System</button></li>
+  </ul>
+</div>
+
+<script is:inline>
+  function applyTheme(theme) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const resolved = theme === 'system' ? (prefersDark ? 'dark' : 'light') : theme
+    // map dark → black (DaisyUI)
+    document.documentElement.setAttribute('data-theme', resolved === 'dark' ? 'black' : resolved)
+    localStorage.setItem('theme', theme)
+    updateLabel(theme)
+  }
+
+  function updateLabel(theme) {
+    const labels = { light: 'Light', dark: 'Dark', system: 'System' }
+    const el = document.getElementById('theme-label')
+    if (el) el.textContent = labels[theme] ?? 'System'
+  }
+
+  function setTheme(theme) {
+    applyTheme(theme)
+    // close dropdown
+    document.activeElement?.blur()
+  }
+
+  function init() {
+    const stored = localStorage.getItem('theme') || 'system'
+    applyTheme(stored)
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system')
+    })
+  }
+
+  init()
+
+  document.addEventListener('astro:after-swap', init)
+</script>

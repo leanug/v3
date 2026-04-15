@@ -4,7 +4,7 @@ import { ClientRouter } from 'astro:transitions'
 import '../styles/global.css'
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 
-import Navbar from '../components/layout/Navbar.astro';
+import Navbar from '../components/layout/Navbar.astro'
 import Footer from '../components/layout/Footer.astro'
 ---
 
@@ -38,10 +38,28 @@ import Footer from '../components/layout/Footer.astro'
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
     <ClientRouter />
-    <SpeedInsights/> 
+    <SpeedInsights/>
+
+    <!-- Este script DEBE ser inline, no defer ni async -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('theme')
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+        let theme
+        if (stored === 'light' || stored === 'dark') {
+          theme = stored
+        } else {
+          theme = prefersDark ? 'dark' : 'light'
+        }
+
+        // map dark → black (DaisyUI)
+        document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'black' : theme)
+      })()
+    </script>
 	</head>
 	<body>
-    <div data-theme="lofi" class="relative leading-tightest scroll-smooth">
+    <div  class="relative leading-tightest scroll-smooth">
       <div class="flex justify-center bg-base-200 text-base-content">
         <div class="flex flex-col w-full min-h-screen xs:px-10 md:mx-16 mx-2.5">
           <Navbar />

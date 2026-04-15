@@ -7,8 +7,8 @@ description: |
 tags: ["Webflow", "Client Work", "Web Development"]
 outbound: "https://www.simjaticlub.com/"
 category: Community club website
-published: false
-featured: false
+published: true
+featured: true
 more: true
 order: 220
 ---

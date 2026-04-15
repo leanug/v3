@@ -8,7 +8,7 @@ gallerySideImg1: ""
 gallerySideImg2: ""
 description: ""
 tags: ["Figma"]
-published: false
+published: true
 featured: false
 more: false
 ---

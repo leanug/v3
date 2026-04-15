@@ -3,8 +3,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 import WorkItem from '../components/work/WorkItem.astro';
-import Plain2 from "../components/icons/Plain2.astro";
 import Contra from "../components/icons/Contra.astro";
+import CTAButton from '../components/ui/Button.astro';
 
 const work: CollectionEntry<'work'>[] = (await getCollection('work'))
   .filter((entry) => entry.data.featured === true)
@@ -27,64 +27,29 @@ const description = "Thoughtful Web development that helps businesses and creato
 ---
 
 <Layout {title} {description}>
-  <section class="my-8 md:mb-12 lg:mb-28 md:mt-16">
-
-    <div class="max-w-4xl text-center mx-auto">
-      <!-- Availability badge -->
-      <div class="bg-base-100 inline-flex items-center gap-2.5 px-3 py-1.5 mb-4 rounded-full text-md text-white">
-        <span class="flex items-center gap-2 rounded-full">
-          <span class="hidden relative sm:flex size-2.5">
-            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
-          </span>
+  <section class="md:mb-8 lg:mb-10 py-24 relative">
+    <!-- Availability badge -->
+    <div class="inline-flex items-center gap-2.5 px-3 py-1.5 mb-4 text-md text-white">
+      <span class="flex items-center gap-2 rounded-full">
+        <span class="hidden relative sm:flex size-2.5">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+          <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
         </span>
-        <span class="text-base-content text-sm">
-          Available for Design & Development
-          <!-- Available for Product Design & Dev — From Late March -->
-        </span>
-      </div>
-
-      <!-- H1 -->
-      <h1 class="font-semibold leading-[1.2] md:leading-[1.1] text-balance
-                text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-        Building thoughtful <br /> interfaces
-      </h1>
-
-      <!-- Description -->
-      <p class="mt-4 md:text-md lg:text-lg text-base-content/70 max-w-2xl mx-auto text-balance">
-        I design and build <span class="font-medium">websites</span> 
-        and digital <span class="font-medium">products</span> for companies and makers.
-      </p>
-
-      <!-- CTA -->
-      <div class="mt-8 flex gap-2.5 justify-center flex-wrap">
-        <a
-          href="mailto:leandroubilla+contact@protonmail.com"
-          class="btn btn-neutral rounded-full pl-3.5 shadow-lg hover:shadow-xs tracking-normal"
-        >
-          <Plain2 size={16} class="mr-0.5" />
-          Send me an email
-        </a>
-        <a
-          href="https://contra.com/leandro_ubilla/"
-          class="group relative inline-flex items-center overflow-hidden btn btn-ghost rounded-full pl-3.5 tracking-normal"
-        >
-          <span class="relative h-4 w-4 mr-1 overflow-hidden">
-            <!-- Top icon (default visible) -->
-            <span class="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-6">
-              <Contra size={16} />
-            </span>
-
-            <!-- Bottom icon (hidden below) -->
-            <span class="absolute inset-0 flex items-center justify-center translate-y-6 transition-transform duration-300 ease-in-out group-hover:translate-y-0">
-              <Contra size={16} />
-            </span>
-          </span>
-
-          <span class="relative z-10">Hire me on Contra</span>
-        </a>
-      </div>
+      </span>
+      <span class="text-base-content text-sm">
+        Available for Design & Development
+        <!-- Available for Product Design & Dev — From Late March -->
+      </span>
     </div>
+    <!-- H1 -->
+    <h1 class="font-semibold leading-[1.2] md:leading-[1.1] text-balance
+          text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+        I'm Leandro — I design and build websites and digital products, working with agencies, companies and freelancers who care about thoughtful interfaces.
+    </h1>
+    <div class="mt-12">
+      <CTAButton href="/work" label="See my work" />
+    </div>
+    <div class="absolute bottom-8 right-0">Case Studies</div>
   </section>
 
   <section aria-label="Work Collection">
@@ -104,14 +69,4 @@ const description = "Thoughtful Web development that helps businesses and creato
       ))}
     </div>    
   </section>
-
-  <div class="flex justify-center mt-12">
-    <a 
-      href="/work" 
-      class="btn btn-soft btn-secondary rounded-full"
-      aria-label="View all work projects"
-    >
-      All work
-    </a>
-  </div>
 </Layout>

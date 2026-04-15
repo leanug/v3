@@ -3,7 +3,7 @@ title: "Aeroservicios USA"
 date: 2026-02-18
 img: "cover.webp"
 description: |
-  Website redesign for a Miami-based ground support equipment provider.
+  Website redesign for a Miami-based ground support equipment provider, including e-commerce.
 video: "aero-before.webm"
 tags: ["UI Design", "Client Work"]
 outbound: "https://www.aeroservicios.com/"
@@ -101,12 +101,15 @@ order: 350
   role="img"
 />
 
-<img 
-  src="/media/work/aeroservicios/home.webp" 
-  class="w-full rounded-xl mb-4 mt-12"
-  alt="Aeroservicios home page"
-  role="img"
-/>
+<div class="bg-base-100 rounded-xl p-4 md:p-6 my-12 max-h-[75vh] overflow-y-auto">
+  <p class="text-xs uppercase tracking-widest mb-3">Home Page</p>
+  <img
+    src="/media/work/aeroservicios/home.webp"
+    class="w-full rounded-lg"
+    alt="Aeroservicios home page"
+    role="img"
+  />
+</div>
 
 <img 
   src="/media/work/aeroservicios/services.webp" 

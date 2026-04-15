@@ -1,5 +1,6 @@
 ---
 import Logo from "../ui/Logo.astro"
+import ThemeToggle from '../../components/ui/ThemeToggle.astro'
 ---
 
 <header class="navbar bg-base-200 mt-1" transition:persist>
@@ -10,7 +11,7 @@ import Logo from "../ui/Logo.astro"
       </div>
       <ul
         tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        class="menu menu-sm dropdown-content bg-base-100 z-1 mt-3 w-52 p-2 shadow">
         <li><a href="/about" aria-label="About me">About</a></li>
         <li><a href="/process" aria-label="Process">Process</a></li>
         <li><a href="/services" aria-label="Services">Services</a></li>
@@ -19,22 +20,22 @@ import Logo from "../ui/Logo.astro"
         <li><a href="https://scriptingpixels.com" target="_blank"  aria-label="My blog">Blog</a></li>
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost rounded-lg">
+    <a href="/">
       <Logo />
     </a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="/about" aria-label="About me">About</a></li>
-      <li><a href="/process" aria-label="Process">Process</a></li>
-      <li><a href="/services" aria-label="Services">Services</a></li>
-      <li><a href="/faq" aria-label="FAQ">FAQ</a></li>
-      <li><a href="/work" aria-label="All work">All work</a></li>
-      <li><a href="https://scriptingpixels.com" target="_blank"  aria-label="My blog">Blog</a></li>
+    <ul class="menu menu-horizontal px-1 ml-3">
+      <li><a class="font-medium rounded-full" href="/about" aria-label="About me">About</a></li>
+      <li><a class="font-medium rounded-full" href="/process" aria-label="Process">Process</a></li>
+      <li><a class="font-medium rounded-full" href="/services" aria-label="Services">Services</a></li>
+      <li><a class="font-medium rounded-full" href="/faq" aria-label="FAQ">FAQ</a></li>
+      <li><a class="font-medium rounded-full" href="/work" aria-label="All work">All work</a></li>
+      <li><a class="font-medium rounded-full" href="https://scriptingpixels.com" target="_blank"  aria-label="My blog">Blog</a></li>
     </ul>
   </div>
+  
   <div class="navbar-end">
-    <a href="/contact" class="btn btn-neutral btn-sm rounded-full">
+    <ThemeToggle />
+    <a href="/contact" class="btn btn-neutral btn-sm ml-2">
       Contact Form
     </a>
   </div>

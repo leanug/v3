@@ -1,0 +1,46 @@
+---
+// CTAButton.astro
+interface Props {
+  href: string
+  label: string
+  external?: boolean
+}
+
+const { href, label, external = false } = Astro.props
+---
+
+<a
+  href={href}
+  class="group inline-flex items-center cursor-pointer no-underline"
+>
+  <span class="
+    btn-xl rounded-full
+    bg-base-content text-base-100
+    flex h-12 items-center px-7
+    text-xs font-medium tracking-widest uppercase
+    whitespace-nowrap
+    transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+    group-hover:pl-12
+  ">
+    {label}
+  </span>
+  <span class="
+    relative z-10
+    h-12 w-12 rounded-full
+    bg-base-content
+    flex items-center justify-center flex-shrink-0
+    transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+    group-hover:scale-110
+  ">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none" viewBox="0 0 24 24"
+      stroke="currentColor" stroke-width="2"
+      class="w-[18px] h-[18px] text-base-100 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-1"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+    </svg>
+  </span>
+
+  
+</a>
