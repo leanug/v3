@@ -1,53 +1,88 @@
 ---
 // ThemeToggle.astro
+import { Icon } from 'astro-icon/components'
 ---
 
 <div class="dropdown dropdown-end">
-  <button tabindex="0" class="btn btn-ghost btn-sm gap-1 rounded-lg">
-    <span class="text-xs">Theme: <span id="theme-label"></span></span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
+  <button tabindex="0" class="btn btn-ghost btn-md rounded-lg px-2 py-1">
+    <span id="theme-dot-active" class="inline-flex items-center justify-center">
+      <Icon id="icon-sun" class="w-4 h-4" name="heroicons:sun-solid" />      
+      <Icon id="icon-moon" class="w-4 h-4" name="heroicons:moon-solid" />      
+      <Icon id="icon-monitor" class="w-4 h-4" name="heroicons:computer-desktop-solid" />    </span>
+      <Icon name="lucide:chevron-down" />
   </button>
-  <ul tabindex="0" class="dropdown-content menu menu-md bg-base-100 border border-base-300 rounded-box z-50 mt-1 w-36 p-1 shadow">
-    <li><button onclick="setTheme('light')">Light</button></li>
-    <li><button onclick="setTheme('dark')">Dark</button></li>
-    <li><button onclick="setTheme('system')">System</button></li>
+
+  <ul tabindex="0" class="dropdown-content menu bg-base-100/95 backdrop-blur-md border border-base-200 rounded-xl z-50 mt-2 w-52 p-2 shadow-lg gap-0.5">
+    <li class="menu-title text-xs opacity-70 px-2 pb-1">Theme</li>
+    <li>
+      <button onclick="setTheme('cmyk')" class="flex items-center gap-3 rounded-lg px-2 py-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-base-200">
+          <Icon id="icon-sun" class="w-4 h-4" name="heroicons:sun-solid" />      
+        </span>
+        <span class="text-sm font-medium">Light</span>
+      </button>
+    </li>
+    <li>
+      <button onclick="setTheme('dark')" class="flex items-center gap-3 rounded-lg px-2 py-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-base-200">
+          <Icon id="icon-moon" class="w-4 h-4" name="heroicons:moon-solid" />
+        </span>
+        <span class="text-sm font-medium">Dark</span>
+      </button>
+    </li>
+    <li>
+      <button onclick="setTheme('system')" class="flex items-center gap-3 rounded-lg px-2 py-2">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-base-200">
+          <Icon id="icon-monitor" class="w-4 h-4" name="heroicons:computer-desktop-solid" />
+        </span>
+        <span class="text-sm font-medium">System</span>
+      </button>
+    </li>
   </ul>
 </div>
 
 <script is:inline>
-  function applyTheme(theme) {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const resolved = theme === 'system' ? (prefersDark ? 'dark' : 'light') : theme
-    // map dark → black (DaisyUI)
-    document.documentElement.setAttribute('data-theme', resolved === 'dark' ? 'black' : resolved)
-    localStorage.setItem('theme', theme)
-    updateLabel(theme)
+  // ⚙️ Global theme config — change here
+  const THEMES = {
+    light: 'cmyk',
+    dark: 'black',
+    lightFallback: 'lofi'
   }
 
-  function updateLabel(theme) {
-    const labels = { light: 'Light', dark: 'Dark', system: 'System' }
-    const el = document.getElementById('theme-label')
-    if (el) el.textContent = labels[theme] ?? 'System'
+  function updateIcon(theme) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isSystem = theme === 'system'
+    const isDark = isSystem ? prefersDark : theme === 'dark'
+
+    document.getElementById('icon-sun').classList.toggle('hidden', isDark || isSystem)
+    document.getElementById('icon-moon').classList.toggle('hidden', !isDark || isSystem)
+    document.getElementById('icon-monitor').classList.toggle('hidden', !isSystem)
+  }
+
+  function applyTheme(theme) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const resolved = theme === 'system'
+      ? (prefersDark ? THEMES.dark : THEMES.lightFallback)
+      : theme === 'dark' ? THEMES.dark : THEMES.light
+
+    document.documentElement.setAttribute('data-theme', resolved)
+    localStorage.setItem('theme', theme)
+    updateIcon(theme)
   }
 
   function setTheme(theme) {
     applyTheme(theme)
-    // close dropdown
     document.activeElement?.blur()
   }
 
   function init() {
     const stored = localStorage.getItem('theme') || 'system'
     applyTheme(stored)
-
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
       if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system')
     })
   }
 
   init()
-
   document.addEventListener('astro:after-swap', init)
 </script>

@@ -1,42 +1,57 @@
 ---
 import Logo from "../ui/Logo.astro"
 import ThemeToggle from '../../components/ui/ThemeToggle.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
-<header class="navbar bg-base-200 mt-1" transition:persist>
-  <div class="navbar-start">
+<header class="mt-5 flex flex-row justify-between gap-4 text-sm font-medium tracking-wide" transition:persist>
+  <div class="navbar-start gap-1.5 items-start w-full">
+  
+    <!-- Menu dropdown -->
     <div class="dropdown">
-      <div aria-label="Open menu" tabindex="0" role="button" class="btn btn-ghost px-2.5 lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 z-1 mt-3 w-52 p-2 shadow">
-        <li><a href="/about" aria-label="About me">About</a></li>
-        <li><a href="/process" aria-label="Process">Process</a></li>
-        <li><a href="/services" aria-label="Services">Services</a></li>
-        <li><a href="/faq" aria-label="FAQ">FAQ</a></li>
-        <li><a href="/work" aria-label="All work">All work</a></li>
-        <li><a href="https://scriptingpixels.com" target="_blank"  aria-label="My blog">Blog</a></li>
+      <button tabindex="0" aria-label="Open menu" class="btn btn-ghost btn-md rounded-md px-1.5 py-2 uppercase tracking-widest text-xs">
+        <Icon name="heroicons:bars-3" class="w-5 h-5" />
+      </button>
+
+      <ul tabindex="-1" class="dropdown-content bg-base-100/95 backdrop-blur-md border border-base-200 rounded-xl z-50 mt-2 w-48 p-2 shadow-lg gap-0.5 flex flex-col">
+        <li class="menu-title text-xs opacity-70 px-3 pb-1 uppercase tracking-widest">Pages</li>
+        <li>
+          <a href="/" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-base-200 transition-colors">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-base-200 transition-colors">
+            About Me
+          </a>
+        </li>
+        <li>
+          <a href="/services" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-base-200 transition-colors">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/leandro-ubilla-gonzalez" target="_blank" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-base-200 transition-colors">LinkedIn</a>
+        </li> 
       </ul>
     </div>
-    <a href="/">
-      <Logo />
-    </a>
-    <ul class="menu menu-horizontal px-1 ml-3">
-      <li><a class="font-medium rounded-full" href="/about" aria-label="About me">About</a></li>
-      <li><a class="font-medium rounded-full" href="/process" aria-label="Process">Process</a></li>
-      <li><a class="font-medium rounded-full" href="/services" aria-label="Services">Services</a></li>
-      <li><a class="font-medium rounded-full" href="/faq" aria-label="FAQ">FAQ</a></li>
-      <li><a class="font-medium rounded-full" href="/work" aria-label="All work">All work</a></li>
-      <li><a class="font-medium rounded-full" href="https://scriptingpixels.com" target="_blank"  aria-label="My blog">Blog</a></li>
-    </ul>
+
+    <a href="/"><Logo /></a>
   </div>
-  
-  <div class="navbar-end">
+  <!-- Logo -->
+
+  <div class="flex flex-row items-center gap-4">
+    <ul class="flex-row w-full text-base-content/70 hidden lg:flex items-center">
+      <li class="w-fit whitespace-nowrap">
+        <a href="/about" class="btn btn-ghost font-medium">About</a>
+      </li>
+      <li class="w-fit whitespace-nowrap">
+        <a href="/services" class="btn btn-ghost">Services</a>
+      </li>
+      <li class="w-fit whitespace-nowrap">
+        <a href="https://linkedin.com/in/leandro-ubilla-gonzalez" target="_blank" class="btn btn-ghost font-medium">LinkedIn</a>
+      </li>    
+    </ul>
     <ThemeToggle />
-    <a href="/contact" class="btn btn-neutral btn-sm ml-2">
-      Contact Form
-    </a>
   </div>
 </header>

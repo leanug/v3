@@ -1,42 +1,19 @@
 ---
-import YouTube from "../icons/YouTube.astro"
-import LinkedIn from "../icons/LinkedIn.astro"
-import Instagram from "../icons/Instagram.astro"
-import Dribbble from "../icons/Dribbble.astro"
-
-// Build-time timestamp
-const lastUpdated = new Date().toLocaleDateString('en-GB', {
-  day: '2-digit',
-  month: 'short',
-  year: 'numeric'
-});
+import { Icon } from 'astro-icon/components'
 ---
 
-<footer class="flex flex-col items-center py-8 mt-12 xl:mt-14" transition:persist>
-  
-  <nav class="flex items-center justify-center gap-3.5 mb-8">
-    <a href="https://youtube.com/@scriptingpixels" title="YouTube" target="_blank" rel="noopener noreferrer" class="btn h-12 w-12 btn-outline btn-sm rounded-full">
-      <YouTube size={20} />
-    </a>
-    <a href="https://linkedin.com/in/leandro-ubilla-gonzalez" title="LinkedIn" target="_blank" rel="noopener noreferrer" class="btn h-12 w-12 btn-outline btn-sm rounded-full">
-      <LinkedIn size={20} />
-    </a>
-    <a href="https://dribbble.com/leanug" title="Dribbble" target="_blank" rel="noopener noreferrer" class="btn h-12 w-12 btn-outline btn-sm rounded-full">
-      <Dribbble size={20} />
-    </a>
-  </nav>
+<footer 
+  class="flex flex-col sm:flex-row justify-between items-center flex-wrap w-full py-6 mt-12 xl:mt-14 gap-3 text-sm" 
+  transition:persist
+>
+  <!-- Col 1 -->
+  <p>© 2026 Leandro · <span class="text-base-content/70">Built with Astro & daisyUI</span></p>
 
-  <div class="flex flex-col md:flex-row justify-between items-center w-full px-4 gap-4 opacity-60 text-[11px] uppercase tracking-widest font-mono">
-    
-    <aside>
-      <p>© 2026 Leandro · Built with Astro & daisyUI</p>
-    </aside>
-
-    <div class="flex items-center gap-2">
-      <div class="w-1.5 h-1.5 rounded-full bg-success shadow-[0_0_8px_rgba(54,211,153,0.5)]"></div>
-      <span>System Online · Last Build: {lastUpdated}</span>
-    </div>
-
-  </div>
-
+  <!-- Col 2 -->
+  <button 
+    onclick="window.scrollTo({top:0,behavior:'smooth'})" 
+    class="btn btn-ghost btn-sm uppercase text-base-content/70 rounded-lg gap-1.5"
+  >
+    Back to top <Icon name="heroicons:arrow-up" class="w-4 h-4" />
+  </button>
 </footer>

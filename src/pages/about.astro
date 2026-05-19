@@ -1,66 +1,83 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+
 const title = "About me";
 const description = "Learn more about the developer behind the keyboard.";
-
-const stack = [
-  { name: "Astro",      icon: "https://cdn.simpleicons.org/astro" },
-  { name: "React",      icon: "https://cdn.simpleicons.org/react" },
-  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
-  { name: "Tailwind",   icon: "https://cdn.simpleicons.org/tailwindcss" },
-  { name: "Figma",      icon: "https://cdn.simpleicons.org/figma" },
-  { name: "Webflow",    icon: "https://cdn.simpleicons.org/webflow" },
-  { name: "Framer",     icon: "https://cdn.simpleicons.org/framer" },
-];
 ---
 
-<Layout {title} {description}>
-  <section class="min-h-screen py-24 ">
-  <div class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+<Layout {title} {description} hideNav hideFooter>
+  <a href="/" class="btn btn-ghost gap-2 mt-6 rounded-lg">
+    <Icon name="heroicons:arrow-left" class="w-4 h-4" />
+    Back to home
+  </a>
 
-    <!-- Col 1: Text -->
-    <div>
-      <p class="text-xs uppercase tracking-widest text-base-content/50 mb-4">About</p>
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-10">
-        What led me here
-      </h1>
+  <section class="max-w-lg mx-auto text-pretty text-xl text-base-content py-20">
+    <Image
+      transition:name="profile-photo"
+      src="/media/leandro.webp" 
+      alt="Leandro Ubilla's logo" 
+      class="w-20 h-20 rounded-lg border border-base-300" 
+      width="80" 
+      height="80"
+      decoding="async"
+      loading="lazy"
+    />
 
-      <div class="space-y-6 text-base text-base-content/70 leading-relaxed max-w-prose">
-        <p>
-          I'm from Montevideo, Uruguay. I started in web development in 2008, building MySpace layouts — small experiments that turned into a real obsession with how the web works.
-        </p>
-        <p>
-          By 2010, I built and maintained a network of Flash game websites that attracted significant traffic, using PHP, MySQL, and HTML. In 2012, I transitioned to WordPress and freelancing, collaborating remotely with a local studio to build websites and WooCommerce-powered e-commerce platforms.
-        </p>
-        <p>
-          Along the way I built several web applications — many never launched, and I spent eight months on a game I never released. Those projects taught me more than the ones that shipped. How to iterate, how to cut, how to keep going anyway.
-        </p>
-        <p>
-          Today I design and build websites and digital products, working with freelancers, studios and companies who care about getting the details right. My stack has evolved — React, Framer, Webflow, Astro, Figma — but the obsession is the same.
-        </p>
+    <h1 class="mt-6 font-semibold mb-5 text-2xl md:text-3xl lg:text-4xl leading-none text-balance tracking-tight bg-clip-text">About me</h1>
+    
+    <p class="mb-6">
+      It started in 2008, I built my first website
+      in plain HTML and CSS, offering free MySpace templates. Not long after, I launched my first three Flash game sites, their "database" was a <code>.txt</code> file on a friend's server, until I could afford Dreamhost. The designs weren't great, but I was learning, one page at a time.
+    </p>
+
+    <p class="mb-6">
+      By 2010 I built a network of Flash game sites
+      using PHP, MySQL, and HTML. It got real traffic. Then Google Panda hit, and I had to pivot.
+    </p>
+
+    <p class="mb-6">
+      In 2012 I moved into WordPress and freelancing, building sites and WooCommerce stores with a local studio and later on Fiverr.
+    </p>
+
+    <p class="mb-6">
+      Later, I picked up Webflow, React, Framer, and UI design. Today, I work with agencies and brands building websites and framer prototypes.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-3 mt-12">
+      <div class="badge py-6 w-[calc(50%-6px)] px-4 rounded-full bg-base-200">
+        <Icon class="w-6 h-6" name="heroicons:cursor-arrow-rays-solid" />        
+        Framer Prototypes
       </div>
-
-      <!-- Stack -->
-      <div class="mt-12">
-        <p class="text-xs uppercase tracking-widest text-base-content/50 mb-4">Stack</p>
-        <div class="flex flex-wrap gap-2">
-          {['Astro', 'TypeScript', 'HTML5', 'Tailwind', 'Webflow', 'Figma'].map(tech => (
-            <span class="badge badge-outline rounded-full text-xs tracking-wide">{tech}</span>
-          ))}
-        </div>
+      <div class="badge py-6 w-[calc(50%-6px)] px-4 rounded-full bg-base-200">
+        <Icon class="w-6 h-6" name="heroicons:globe-alt-solid" />        
+        Webflow
+      </div>
+      <div class="badge py-6 w-[calc(50%-6px)] px-4 rounded-full bg-base-200">
+        <Icon class="w-6 h-6" name="heroicons:globe-alt-solid" />        
+        Web Development
+      </div>
+      <div class="badge py-6 w-[calc(50%-6px)] px-4 rounded-full bg-base-200">
+        <Icon class="w-6 h-6" name="heroicons:swatch-solid" />        
+        UI Design
       </div>
     </div>
-
-    <!-- Col 2: Image -->
-    <div class="w-full aspect-[3/4] rounded-xl overflow-hidden bg-base-200">
-      <img
-        src="/media/about/leandro.webp"
-        alt="Leandro"
-        class="w-full h-full object-cover"
-      />
+  </section>
+  <div class="group flex items-end justify-center mt-12 max-w-4xl mx-auto mb-30 px-2.5">
+    <div class="w-1/3 -rotate-6 shadow-xl rounded-2xl overflow-hidden p-3 bg-white translate-x-8 scale-90 transition-transform duration-300 ease-out group-hover:-translate-x-4">
+      <img src="/media/about-1.webp" alt="" class="w-full h-full object-cover rounded-lg" />
     </div>
-
+    <div class="w-1/3 -translate-y-3 shadow-2xl rounded-2xl overflow-hidden p-3 bg-white z-10">
+      <img src="/media/about-2.webp" alt="" class="w-full h-full object-cover rounded-lg" />
+    </div>
+    <div class="w-1/3 rotate-6 shadow-xl rounded-2xl overflow-hidden p-3 bg-white -translate-x-8 scale-90 transition-transform duration-300 ease-out group-hover:translate-x-4">
+      <img src="/media/about-3.webp" alt="" class="w-full h-full object-cover rounded-lg" />
+    </div>
   </div>
-</section>
+  <a href="/" class="btn btn-ghost gap-2 mb-6 rounded-lg">
+    <Icon name="heroicons:arrow-left" class="w-4 h-4" />
+    Back to home
+  </a>
 </Layout>

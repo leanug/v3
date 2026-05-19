@@ -1,0 +1,56 @@
+---
+const faqs = [
+  {
+    question: "How do we get started?",
+    answer: "We start with a short call to align on goals and scope. If you prefer, you can also send a detailed brief by email. I'll review it and reply with a clear proposal, pricing, and timeline.",
+  },
+  {
+    question: "How long does a project take?",
+    answer: "Landing pages usually take 1 to 2 weeks. Multi-page sites take 2 to 4 weeks. Larger products depend on scope and feedback speed.",
+  },
+  {
+    question: "How do payments work?",
+    answer: "Payments are handled via <strong>PayPal</strong>. Projects begin with a 50% upfront payment, with the remaining 50% due before final delivery.",
+  },
+  {
+    question: "What is your process?",
+    answer: "We begin with an initial brief to define goals, scope, and expectations. Next, I create a moodboard to establish visual direction. Then I move into wireframes to define structure and user flow. After approval, I design the full UI with refined visuals and interactions. If required, I handle development in Framer, Webflow, or Astro. You will receive regular updates throughout.",
+  },
+  {
+    question: "What's your revision policy?",
+    answer: "Revisions are included during the wireframe phase to lock structure. After final design, 1 to 2 major revision rounds are included. Additional revisions are billed at my hourly rate.",
+  },
+  {
+    question: "Do you build in Framer?",
+    answer: "Yes. I build in Framer. I also work with <strong>Webflow</strong> and <strong>Astro</strong> when needed.",
+  },
+  {
+    question: "Can you handle quick design updates?",
+    answer: "Yes. Smaller tasks don't require a full project scope. Send details and I'll quote accordingly.",
+  },
+  {
+    question: "Do you work with agencies?",
+    answer: "Yes. I collaborate with agencies and internal teams when needed.",
+  },
+  {
+    question: "Can we communicate via WhatsApp?",
+    answer: "Yes. WhatsApp is available for project communication after kickoff.",
+  },
+  {
+    question: "What is your refund policy?",
+    answer: "Payments are non-refundable once the project has started. The initial deposit is non-refundable, as time and production capacity are reserved specifically for each project.",
+  },
+]
+---
+
+<section class="max-w-3xl w-full mx-auto">
+  <div class="space-y-2">
+    {faqs.map((faq, i) => (
+      <div class="collapse w-full collapse-arrow bg-base-200/40 rounded-xl">
+        <input type="radio" name="faq-accordion" checked={i === 0} />
+        <div class="collapse-title font-medium">{faq.question}</div>
+        <div class="collapse-content text-base-content/70 leading-relaxed text-balance" set:html={faq.answer} />
+      </div>
+    ))}
+  </div>
+</section>

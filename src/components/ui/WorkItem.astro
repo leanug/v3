@@ -1,0 +1,85 @@
+---
+import CardActions from '../ui/Card/CardActions.astro';
+import { Image } from 'astro:assets';
+
+const { id, img, video, title, description, tags = [], outbound, more, showMeta, category } = Astro.props;
+const imagePath = `/media/work/${id}/${img}`;
+const videoPath = video ? `/media/work/${id}/${video}` : null;
+---
+
+<article class="group flex flex-col gap-4">
+  {showMeta && (
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-4">
+      <span class="text-md lg:text-xl font-medium leading-tight w-full md:w-1/4">
+        {title}
+      </span>
+      <span class="text-md leading-tight text-base-content/70 w-full md:w-1/4 text-balance">
+        {category ? `${category} ` : ''}
+      </span>
+      <p class="text-sm text-base-content/70 w-full md:w-1/4 whitespace-pre-line">
+        {description}
+      </p>
+      <div class="flex flex-wrap justify-start md:justify-end items-end gap-1.5 w-full md:w-1/4">
+        {tags.map((tag: string) => (
+          <span class="badge badge-soft badge-primary rounded-full">{tag}</span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <div class="relative overflow-hidden aspect-4/3 rounded-2xl">
+    {more ? (
+      <a href={`/work/${id}`} class="block w-full h-full">
+        {video ? (
+          <video
+            autoplay loop muted playsinline
+            class="w-full h-full object-cover object-top aspect-4/3"
+          >
+            <source src={`${videoPath}`} type="video/webm" />
+            <source src={`${videoPath}`} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            transition:name={`image-${id}`}
+            src={imagePath}
+            alt={`Cover of ${title}`}
+            widths={[400, 800, 1280]}
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            width={1600}
+            height={900}
+            decoding="async"
+            loading="lazy"
+            class="w-full h-full object-top object-cover bg-base-200 aspect-4/3"
+          />
+        )}
+      </a>
+    ) : (
+      <>
+        {video ? (
+          <video
+            autoplay loop muted playsinline
+            class="w-full h-full object-cover object-top aspect-4/3"
+          >
+            <source src={`${videoPath}.webm`} type="video/webm" />
+            <source src={`${videoPath}.mp4`} type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            transition:name={`image-${id}`}
+            src={imagePath}
+            alt={`Cover of ${title}`}
+            widths={[400, 800, 1280]}
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            width={1600}
+            height={900}
+            decoding="async"
+            loading="lazy"
+            class="w-full h-full object-cover bg-base-200 aspect-4/3"
+          />
+        )}
+      </>
+    )}
+
+    <CardActions {outbound} {more} {id} />
+  </div>
+</article>

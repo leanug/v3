@@ -2,12 +2,11 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
-import WorkItem from '../components/work/WorkItem.astro';
-import Contra from "../components/icons/Contra.astro";
-import CTAButton from '../components/ui/Button.astro';
+import WorkItem from '../components/ui/WorkItem.astro';
+import Hero from '../components/ui/Hero.astro';
 
 const work: CollectionEntry<'work'>[] = (await getCollection('work'))
-  .filter((entry) => entry.data.featured === true)
+  .filter((entry) => entry.data.published === true)
   .sort((a, b) => {
     const orderA = a.data.order ?? -Infinity;
     const orderB = b.data.order ?? -Infinity;
@@ -27,46 +26,24 @@ const description = "Thoughtful Web development that helps businesses and creato
 ---
 
 <Layout {title} {description}>
-  <section class="md:mb-8 lg:mb-10 py-24 relative">
-    <!-- Availability badge -->
-    <div class="inline-flex items-center gap-2.5 px-3 py-1.5 mb-4 text-md text-white">
-      <span class="flex items-center gap-2 rounded-full">
-        <span class="hidden relative sm:flex size-2.5">
-          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-          <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
-        </span>
-      </span>
-      <span class="text-base-content text-sm">
-        Available for Design & Development
-        <!-- Available for Product Design & Dev — From Late March -->
-      </span>
-    </div>
-    <!-- H1 -->
-    <h1 class="font-semibold leading-[1.2] md:leading-[1.1] text-balance
-          text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-        I'm Leandro — I design and build websites and digital products, working with agencies, companies and freelancers who care about thoughtful interfaces.
-    </h1>
-    <div class="mt-12">
-      <CTAButton href="/work" label="See my work" />
-    </div>
-    <div class="absolute bottom-8 right-0">Case Studies</div>
-  </section>
-
+  <Hero />
   <section aria-label="Work Collection">
-    <div class="space-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-10">
       {work.map((entry) => (
-        <WorkItem
-          img={entry.data.img}
-          title={entry.data.title}
-          tags={entry.data?.tags}
-          description={entry.data?.description}
-          outbound={entry.data?.outbound}
-          category={entry.data?.category}
-          slug={entry.slug}
-          more={entry.data?.more || false}
-          showMeta={true}
-        />
+        <div style={entry.data.cols === 1 ? 'grid-column: 1 / -1' : ''}>
+          <WorkItem
+            img={entry.data.img}
+            video={entry.data.video}
+            title={entry.data.title}
+            tags={entry.data?.tags}
+            description={entry.data?.description}
+            outbound={entry.data?.outbound}
+            id={entry.id}
+            more={entry.data?.more || false}
+            showMeta={false}
+          />
+        </div>
       ))}
-    </div>    
+    </div>
   </section>
 </Layout>

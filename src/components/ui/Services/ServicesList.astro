@@ -1,0 +1,62 @@
+---
+import ServiceCard from './ServiceCard.astro'
+
+const services = [
+  {
+    index: '01',
+    title: 'UI Design',
+    description:
+      'Clean, responsive interfaces designed with usability and consistency in mind.',
+    price: '$600',
+    unit: 'project',
+    features: [
+      'Responsive design',
+      'Design systems',
+      'Frequent updates',
+      'Email, video calls',
+    ]
+  },
+  {
+    index: '02',
+    title: 'Web Development',
+    description:
+      'Production-ready websites built in Webflow, Framer, or Astro. Fast, responsive, and easy to maintain.',
+    price: '$1,000',
+    unit: 'project',
+    features: [
+      'Responsive builds',
+      'CMS integration',
+      'Smooth animations',
+      'Easy to maintain',
+      'Email, video calls',
+    ],
+    platforms: ['Webflow', 'Framer', 'Astro']
+  },
+  {
+    index: '03',
+    title: 'Framer Prototypes',
+    description:
+      'Interactive prototypes for pitching ideas, testing flows, and presenting products with real interactions.',
+    price: '$400',
+    unit: 'project',
+    features: [
+      'Interactive flows',
+      'Responsive design',
+      'Shareable prototype link',
+      'Email, video calls',
+    ]
+  }
+]
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+  {services.map((service) => (
+    <ServiceCard
+      index={service.index}
+      title={service.title}
+      description={service.description}
+      features={service.features}
+      platforms={service.platforms}
+    />
+  ))}
+</div>

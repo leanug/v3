@@ -1,0 +1,33 @@
+---
+// Hero.astro
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="my-20 md:my-28">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-10 items-baseline">
+    <h1 class="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-none text-balance tracking-tight bg-clip-text">
+      Designing websites and prototypes for agencies and brands.
+    </h1>
+    <div class="space-y-7 lg:w-3/4">
+      <p class="font-medium leading-relaxed md:text-lg text-balance text-base-content/85">
+        I work across UI design, Framer prototypes, Webflow, and custom coded websites, easy to manage, built to last.
+      </p>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <a 
+          href="mailto:leandroubilla@protonmail.com" 
+          class="btn btn-neutral font-medium rounded-lg"
+        >
+          <Icon class="w-6 h-6" name="heroicons:inbox-solid" />
+          Email me
+        </a>
+        <a 
+          href="/about" 
+          class="btn btn-outline font-medium rounded-lg"
+        >
+          <Icon class="w-6 h-6" name="heroicons:adjustments-horizontal-solid" />
+          About me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

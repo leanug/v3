@@ -1,0 +1,15 @@
+---
+// components/TestimonialList.astro
+import TestimonialCard from './TestimonialCard.astro'
+import { testimonials } from '../../../data/testimonials'
+---
+
+<section>
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      {testimonials.map((t) => (
+        <TestimonialCard {...t} />
+      ))}
+    </div>
+  </div>
+</section>
