@@ -66,7 +66,7 @@ import { Icon } from 'astro-icon/components'
       : theme === 'dark' ? THEMES.dark : THEMES.light
 
     document.documentElement.setAttribute('data-theme', resolved)
-    localStorage.setItem('theme', theme)
+    localStorage.setItem('portfolio:theme', theme)
     updateIcon(theme)
   }
 
@@ -79,7 +79,7 @@ import { Icon } from 'astro-icon/components'
     const stored = localStorage.getItem('theme') || 'system'
     applyTheme(stored)
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system')
+      if ((localStorage.getItem('portfolio:theme') || 'system') === 'system') applyTheme('system')
     })
   }
 

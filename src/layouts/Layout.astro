@@ -43,20 +43,10 @@ const { hideNav = false, hideFooter = false } = Astro.props;
     <ClientRouter />
     <SpeedInsights/>
 
-    <!-- Este script DEBE ser inline, no defer ni async -->
     <script is:inline>
       (function () {
-        const stored = localStorage.getItem('theme')
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-        let theme
-        if (stored === 'light' || stored === 'dark') {
-          theme = stored
-        } else {
-          theme = prefersDark ? 'dark' : 'light'
-        }
-
-        // map dark → black (DaisyUI)
+        const stored = localStorage.getItem('portfolio:theme')
+        const theme = (stored === 'light' || stored === 'dark') ? stored : 'dark'
         document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'black' : theme)
       })()
     </script>
