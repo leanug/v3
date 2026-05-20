@@ -45,9 +45,13 @@ const { hideNav = false, hideFooter = false } = Astro.props;
 
     <script is:inline>
       (function () {
-        const stored = localStorage.getItem('portfolio:theme')
-        const theme = (stored === 'light' || stored === 'dark') ? stored : 'dark'
-        document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'black' : theme)
+        const THEMES = { light: 'cmyk', dark: 'black', lightFallback: 'lofi' }
+        const stored = localStorage.getItem('portfolio:theme') || 'system'
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        const resolved = stored === 'system'
+          ? (prefersDark ? THEMES.dark : THEMES.lightFallback)
+          : stored === 'dark' ? THEMES.dark : THEMES.light
+        document.documentElement.setAttribute('data-theme', resolved)
       })()
     </script>
 	</head>

@@ -76,7 +76,7 @@ import { Icon } from 'astro-icon/components'
   }
 
   function init() {
-    const stored = localStorage.getItem('theme') || 'system'
+    const stored = localStorage.getItem('portfolio:theme') || 'system'  // was 'theme'
     applyTheme(stored)
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
       if ((localStorage.getItem('portfolio:theme') || 'system') === 'system') applyTheme('system')
